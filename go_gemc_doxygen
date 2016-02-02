@@ -8,10 +8,11 @@
 # make sure we have all versions
 mkdir -p gemc_doxy
 cd gemc_doxy
-svn co https://phys12svn.jlab.org/repos/gemc/releases/
+svn co https://phys12svn.jlab.org/repos/gemc/releases/2.2/source 2.2
+git clone https://github.com/gemc/source.git 2.3
 
 # for now, all versions
-set versions = `ls releases`
+set versions = `ls`
 
 echo
 echo DOXYGEN for versions: $versions
@@ -20,20 +21,27 @@ echo
 foreach v ($versions)
 	echo
 	echo Running $v
-	cd releases/$v/source
-	doxygen doxygen/Doxyfile
+	cd $v
+	cp /opt/projects/cronjobs/gemc_logo.gif .
+	cp /opt/projects/gemc/releases/devel/docs/doxygen/Doxyfile .
+	cp /opt/projects/gemc/releases/devel/docs/doxygen/doxygen.css .
+	echo "PROJECT_NUMBER=$v" >> Doxyfile
+	doxygen Doxyfile
 
 	# moving it first, then copying, so I can omit
 	# destination filename, otherwise may put it
 	# in sub-dir (e.g. 2.0_beta1/2.0_beta1)
 	mv html $v
-	
-	scp -r $v ftp:/u/group/clas/www/gemc/html/work/doxy
-	mv $v html
 
-	cd ../../..
+	scp -r $v ftp:/u/group/clas/www/gemc/html/work/doxy
+
+	cd ../
 end
 
 cd /opt/projects/cronjobs
 scp table.css     ftp:/u/group/clas/www/gemc/html/work/doxy
 scp gemc_logo.gif ftp:/u/group/clas/www/gemc/html/work/doxy
+scp doxies.html ftp:/u/group/clas/www/gemc/html/work/doxy
+
+cd
+rm -rf gemc_doxy
