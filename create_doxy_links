@@ -1,0 +1,36 @@
+#!/bin/csh -f
+
+# This script is to be run at JLAB.
+# It will create a simple html file with
+# a table with links to the various version of doxygen
+
+
+# CUE cronjob:
+# 22 02 * * * /u/home/ungaro/cronjobs/create_doxy_links
+
+
+set wdir = https://gemc.jlab.org/work/doxy
+set ldir = /u/group/clas/www/gemc/html/work/doxy
+
+cd $ldir
+
+rm -rf doxies.html
+
+echo "<head>"                                                                                     >> doxies.html
+echo '<LINK href="table.css" rel="stylesheet" type="text/css"/>'                          >> doxies.html
+echo "</head>"                                                                                   >> doxies.html
+echo "<html>"                                                                                     >> doxies.html
+echo "<center>"                                                                                   >> doxies.html
+echo '<br><br><img src="'$wdir'/gemc_logo.gif" width="200"/><br><br>'                             >> doxies.html
+echo "<h1>Doxygen Documentation</h1>"                                                             >> doxies.html
+echo "<table class='gradienttable'>"                                                              >> doxies.html
+echo "<tr><th><p>GEMC Versions <br> (most recent first) <br></p></th></tr>"                       >> doxies.html
+foreach v (`ls -t | grep -v html | grep -v gif | grep -v table`)
+	echo '<tr><td align="center"><p><a href="'$wdir/$v'">'$v'</a></p></td></tr>'                     >> doxies.html
+end
+echo "</table>"                                                                                   >> doxies.html
+echo "</center>"                                                                                  >> doxies.html
+echo "</html>"                                                                                    >> doxies.html
+
+
+

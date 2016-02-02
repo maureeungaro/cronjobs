@@ -1,0 +1,22 @@
+#!/bin/csh -f
+
+# first argument: project name
+# second argument: project directory
+
+if($1 == "-h" || $1 == "" || $2 == "" || $#argv != 2) then
+	echo " "
+	echo "Usage:   "
+	echo  "  >> create_gemc_compilation_table <project_name> <project_directory>"
+	echo  "     add new bank bankid"
+	echo " "
+	exit 0
+endif
+
+
+set project = $1
+set dir     = $2
+
+echo
+echo Project: $project
+echo Directory: $dir
+echo

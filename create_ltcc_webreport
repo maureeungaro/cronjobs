@@ -1,0 +1,98 @@
+#!/bin/csh -f
+
+# It will create a simple html file with
+# a table containing
+# project activity IDs and name
+# start/end date,
+# project status
+# Project completion %
+
+# MY cronjob:
+# 15 * * * * /opt/projects/cronjobs/create_ltcc_webreport
+
+cd /opt/projects/cronjobs
+
+set report =  /Users/ungaro/Desktop/Dropbox/ltcc/ltcc_report.txt
+
+set aid  = `cat $report | awk -F--- '{print $1}'`
+set asd  = `cat $report | awk -F--- '{print $3}'`
+set aed  = `cat $report | awk -F--- '{print $4}'`
+set aasd = `cat $report | awk -F--- '{print $5}'`
+set aaed = `cat $report | awk -F--- '{print $6}'`
+set aco  = `cat $report | awk -F--- '{print $8}'`  # percentage completed
+set ast  = `cat $report | awk -F--- '{print $9}'`  # status: 0 = not started,    1 = on time,   2 = delaued
+
+rm -rf ltcc_baseline.html
+
+echo "<head>"                                                         >> ltcc_baseline.html
+echo "<LINK href='table.css' rel='stylesheet' type='text/css'> "      >> ltcc_baseline.html
+echo "</head> "                                                       >> ltcc_baseline.html
+echo "<html>"                                                         >> ltcc_baseline.html
+echo "<center>"                                                       >> ltcc_baseline.html
+echo "<br><br><img src='ltcc_logo.png' width='300'/><br><br>"         >> ltcc_baseline.html
+echo "<h1>LTCC Re-baseline Status</h1><br><br>"                       >> ltcc_baseline.html
+echo "<table class='gradienttable'>"                                  >> ltcc_baseline.html
+echo "<tr><th><p>Activity ID  </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>Name <br>    </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>Start Date   </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>Actual Start </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>End Date     </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>Actual End   </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>Progress     </p></th>"                              >> ltcc_baseline.html
+echo "    <th><p>Status Update</p></th>"                              >> ltcc_baseline.html
+echo "    <th><p> Link</p></th></tr>"                                 >> ltcc_baseline.html
+set i = 1
+
+while ($i <= $#aco)
+	echo "<tr><td><p> $aid[$i] </p></td>"                 >> ltcc_baseline.html
+
+	set name = `grep $aid[$i] $report  | awk -F--- '{print $2}'`
+	echo $name
+	echo "    <td><p> $name </p></td>"                    >> ltcc_baseline.html
+
+	echo "    <td><p> $asd[$i]  </p></td>"                 >> ltcc_baseline.html
+	echo "    <td><p> $aasd[$i] </p></td>"                >> ltcc_baseline.html
+	echo "    <td><p> $aed[$i]  </p></td>"                 >> ltcc_baseline.html
+	echo "    <td><p> $aaed[$i] </p></td>"                 >> ltcc_baseline.html
+
+
+
+	set tstatus = `grep $aid[$i] $report  | awk -F--- '{print $7}'`
+
+	if($ast[$i] == 1) then
+		echo "    <td style='background-color: #88ff88; font-size: 140%; text-align:center'><p> $aco[$i] </p></td>"   >> ltcc_baseline.html
+		echo "    <td style='background-color: #88ff88;'><p style='border-top: 0px; border-left: 0px; '> $tstatus </p></td>"                   >> ltcc_baseline.html
+	else if($ast[$i] == 2) then
+		echo "    <td style='background-color: #ff6666; font-size: 140%; text-align:center'><p> $aco[$i] </p></td>"   >> ltcc_baseline.html
+		echo "    <td style='background-color: #ff6666;'><p style='border-top: 0px; border-left: 0px'> $tstatus </p></td>"                   >> ltcc_baseline.html
+	else
+		echo "    <td><p> $aco[$i] </p></td>"  >> ltcc_baseline.html
+		echo "    <td><p> $tstatus </p></td>"  >> ltcc_baseline.html
+	endif
+
+	echo '    <td> <a href="https://www.jlab.org/Hall-B/secure/e1-6/mauri/ltcc/'$aid[$i]'"> details </a></td></tr>'   >> ltcc_baseline.html
+
+@ i += 1
+end
+
+echo "</table>"     >> ltcc_baseline.html
+echo "<br><br><br><br> Updated on " `date` "by M. Ungaro <br><br>"        >> ltcc_baseline.html
+
+echo "</center>"    >> ltcc_baseline.html
+
+echo "</body>"      >> ltcc_baseline.html
+echo "</html>"      >> ltcc_baseline.html
+
+
+
+scp ltcc_baseline.html table.css ltcc_logo.png ftp:/u/site/www/html/Hall-B/secure/e1-6/mauri/ltcc
+
+scp -r /Users/ungaro/Desktop/Dropbox/ltcc/activities/* ftp:/u/site/www/html/Hall-B/secure/e1-6/mauri/ltcc
+
+
+
+
+
+
+
+

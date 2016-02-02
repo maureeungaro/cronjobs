@@ -1,0 +1,39 @@
+#!/bin/csh 
+
+# MacPro cronjob:
+# 35 04 * * * /opt/projects/cronjobs/go_gemc_doxygen
+
+
+
+# make sure we have all versions
+mkdir -p gemc_doxy
+cd gemc_doxy
+svn co https://phys12svn.jlab.org/repos/gemc/releases/
+
+# for now, all versions
+set versions = `ls releases`
+
+echo
+echo DOXYGEN for versions: $versions
+echo
+
+foreach v ($versions)
+	echo
+	echo Running $v
+	cd releases/$v/source
+	doxygen doxygen/Doxyfile
+
+	# moving it first, then copying, so I can omit
+	# destination filename, otherwise may put it
+	# in sub-dir (e.g. 2.0_beta1/2.0_beta1)
+	mv html $v
+	
+	scp -r $v ftp:/u/group/clas/www/gemc/html/work/doxy
+	mv $v html
+
+	cd ../../..
+end
+
+cd /opt/projects/cronjobs
+scp table.css     ftp:/u/group/clas/www/gemc/html/work/doxy
+scp gemc_logo.gif ftp:/u/group/clas/www/gemc/html/work/doxy
