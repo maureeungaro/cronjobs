@@ -41,7 +41,7 @@ end
 cd /opt/projects/cronjobs
 scp table.css     ftp:/u/group/clas/www/gemc/html/work/doxy
 scp gemc_logo.gif ftp:/u/group/clas/www/gemc/html/work/doxy
-scp doxies.html ftp:/u/group/clas/www/gemc/html/work/doxy
+scp doxies.html   ftp:/u/group/clas/www/gemc/html/work/doxy
 
 cd
 rm -rf gemc_doxy
