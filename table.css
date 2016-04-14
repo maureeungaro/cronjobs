@@ -2,21 +2,25 @@
 <style type="text/css">
 	table.gradienttable {
 		font-family: verdana,arial,sans-serif;
-		font-size:11px;
+		font-size:24px;
+		size:14px;
 		color:#333333;
 		border-width: 1px;
 		border-color: #999999;
 		border-collapse: collapse;
 	}
 table.gradienttable th {
+	font-size:24px;
 	padding: 0px;
 	background: linear-gradient(to bottom,  #d5e3e4 0%,#ccdee0 40%,#b3c8cc 100%);
 	border: 1px solid #999999;
 }
 table.gradienttable td {
+	font-size:28px;
 	padding: 2px;
 	background: #ebecda;
 	border: 1px solid #999999;
+	
 }
 table.gradienttable th p{
 	margin:0px;
@@ -36,5 +40,13 @@ table.gradienttable td p{
 	border-left: 1px solid #fcfdec;;
 	border-right:0px;
 }
+
+table.gradienttable td.first {
+	font-size:32px;
+	padding: 2px;
+	background: #cbfcba;
+	border: 1px solid #999999;
+}
+
 </style>
 
