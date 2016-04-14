@@ -6,10 +6,12 @@
 
 
 # make sure we have all versions
+rm -rf   gemc_doxy
 mkdir -p gemc_doxy
-cd gemc_doxy
-svn co https://phys12svn.jlab.org/repos/gemc/releases/2.2/source 2.2
-git clone https://github.com/gemc/source.git 2.3
+cd       gemc_doxy
+
+git clone https://github.com/gemc/releases.git
+cd releases
 
 # for now, all versions
 set versions = `ls`
@@ -23,8 +25,8 @@ foreach v ($versions)
 	echo Running $v
 	cd $v
 	cp /opt/projects/cronjobs/gemc_logo.gif .
-	cp /opt/projects/gemc/releases/devel/docs/doxygen/Doxyfile .
-	cp /opt/projects/gemc/releases/devel/docs/doxygen/doxygen.css .
+	cp /opt/projects/gemc/docs/doxygen/Doxyfile .
+	cp /opt/projects/gemc/docs/doxygen/doxygen.css .
 	echo "PROJECT_NUMBER=$v" >> Doxyfile
 	doxygen Doxyfile
 
