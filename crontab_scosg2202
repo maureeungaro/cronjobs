@@ -1,0 +1,45 @@
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=baltzell@jlab.org,ungaro@jlab.org
+#,devita@jlab.org,mckinnon@jlab.org
+d=/home/gemc/sw/utilities/osg/bin
+s=/home/gemc/software/Submit/utils/scripts/
+#
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+#
+#
+# Submit jobs, log the OSG usage and prioritize them:
+*/6 *  *  *  * flock -n $HOME/.submit.lock      $s/gemcSubmitCron.sh >& $HOME/logs/submitCron.log   >/dev/null 2>&1
+*/10 *  *  *  * flock -n $HOME/.jlog.lock        $s/osgQuery.sh       >& $HOME/logs/osgQuery.log     >/dev/null 2>&1
+*/30   *  *  *  * flock -n $HOME/.osgpriority.lock $s/priorityCron.sh   >& $HOME/logs/priorityCron.log >/dev/null 2>&1
+#
+# Update a "pretty" condor table:
+33 0-22/2  *  *  * flock -n $HOME/.condor.lock $d/condor-probe.py -summary >& $HOME/logs/condor.txt >/dev/null 2>&1
+#
+# Local filesystem cleanup:
+52   *  *  *  * flock -n ~/.osgpool.lock $d/disk-cleanup.py -path /osgpool/hallb/clas12/gemc -delete 21 -empty 21 -trash 2 2>&1 > /osgpool/hallb/clas12/gemc/disk-cleanup.log || echo "ERROR:  Previous cleanup cronjob still running"
+#
+# Check for and log CVMFS errors on remote nodes:
+20 1-23/2  *  *  * flock -n $HOME/.condor.lock $d/check-cvmfs.sh || echo "ERROR:  Previous condor cronjob still running"
+#
+# Check for and log XRootD errors on remote nodes:
+30 1-23/2  *  *  * flock -n $HOME/.condor.lock $d/check-xrootd.sh || echo "ERROR:  Previous condor cronjob still running"
+#
+# Vacate and log long-running/stalled jobs on OSG:
+52 1-23/2  *  *  * flock -n $HOME/.condor.lock $d/vacate-stalls.sh 36 || echo "ERROR:  Previous condor cronjob still running"
+#
+# Emails the daily digest of above errors and vacates, and attaches a plot summary:
+0    5     *  *  * $d/daily-digest.sh
+#
+# Update the timeline archive:
+46   *     *  *  * flock -n $HOME/.condor.lock $d/condor-probe.py -timeline
+#
+# Block sites after submission:
+# 10,25,37 * * * *  condor_qedit gemc UNDESIRED_Sites '"UWM-Mortimer,NMSU_DISCOVERY"' > /dev/null
+#
