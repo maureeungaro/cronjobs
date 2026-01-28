@@ -10,6 +10,8 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 
+# sync artifacts from /work
+*/10 * * * * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/sync_staged_to_cvmfs.zsh  || echo "$(date) cvmfs sync artifact installed skipped: lock busy"
 
 
 
