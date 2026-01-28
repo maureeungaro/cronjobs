@@ -12,5 +12,5 @@ MAILTO=ungaro@jlab.org
 
 # osgLog.sh copies the query log from /volatile to the web location
 # pull_clas12-config.sh syncs the osg portal clas12-config
-01,11,21,31,41,51   *  *  *  *flock -n $HOME/.osgl.lock $HOME/cronjobs/osgLog.sh             || echo "$(date) osg log skipped: lock busy"
-20             1-23/2  *  *  * flock -n $HOME/.c12c.lock $HOME/cronjobs/pull_clas12-config.sh || echo "$(date) pull clas12-config skipped: lock busy"
+01,11,21,31,41,51   *  *  *  * flock -n $HOME/.osgl.lock $HOME/cronjobs/osgLog.sh             || echo "$(date) osg log skipped: lock busy"
+20             1-23/2  *  *  *  flock -n $HOME/.c12c.lock $HOME/cronjobs/pull_clas12-config.sh || echo "$(date) pull clas12-config skipped: lock busy"
