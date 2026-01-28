@@ -1,16 +1,17 @@
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=ungaro@jlab.org
-# CUE Machine: jlabl2
+
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
 # |  |  .---------- day of month (1 - 31)
 # |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
 # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
 # |  |  |  |  |
-# *  *  *  *  * user-name  command to be executed
+# *  *  *  *  * command to be executed
+
 # make sure clas12Tags is updaded, used for the next crontab
-*/30  *  *  *  * flock -n $HOME/.plots.lock $HOME/update_mauriplots_jlabl4.zsh >& $HOME/logs/plots.log   >/dev/null 2>&1
+*/30 * * * * flock -n $HOME/.plots.lock $HOME/cronjobs/update_mauriplots_jlabl2.zsh  || echo "$(date) update_mauriplots_jlabl2 skipped: lock busy"
 
 
 
