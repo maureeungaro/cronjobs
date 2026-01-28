@@ -10,8 +10,6 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 
-# install artifacts in /scigroup/cvmfs
-20 1-23/2 *  *  * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/cron_gemc_artifact_install_jlab.sh  || echo "$(date) cvmfs artifact installed skipped: lock busy"
 
 
 

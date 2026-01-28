@@ -11,7 +11,9 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 # make sure clas12Tags is updaded, used for the next crontab
-*/30 * * * * flock -n $HOME/.plots.lock $HOME/cronjobs/update_mauriplots_jlabl2.zsh  || echo "$(date) update_mauriplots_jlabl2 skipped: lock busy"
+# install artifacts in /scigroup/cvmfs - notice because of firewall this only works on jlabl2
+*/02    *  * * *   flock -n $HOME/.plots.lock $HOME/cronjobs/update_mauriplots_jlabl2.zsh        || echo "$(date) update_mauriplots_jlabl2 skipped: lock busy"
+20 1-23/2  * * * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/cron_gemc_artifact_install_jlab.sh  || echo "$(date) cvmfs artifact installed skipped: lock busy"
 
 
 
