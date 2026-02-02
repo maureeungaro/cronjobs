@@ -27,23 +27,21 @@ function pull_or_clone() {
 
 	cd $basedir || exit
 	# optional reset argument will remove and re-clone the repo
-	if [[ $# -eq 3 && $3 == "reset" ]]; then
+	if [[ $# -ge 3 && $3 == "reset" ]]; then
 		rm -rf "$project_name"
-		mkdir -p "$project_name"
-		cd "$project_name/.." || exit
-		git clone -s "$project_repo"
-		echo "$project_name reset and cloned"
-	else
-		if [[ -d $project_name ]]; then
-			cd "$project_name" || exit
-			git pull
-			echo "$project_name pulled"
-		else
-			"cd $basedir" || exit
-			git clone "$project_repo"
-			echo "$project_name cloned"
-		fi
 	fi
+
+	if [[ -d "$project_name/.git" ]]; then
+		cd "$project_name" || exit
+		# safer for cron: don't create merge commits; fail if non-ff needed
+		git pull --ff-only
+		echo "$project_name pulled"
+	else
+		rm -rf "$project_name"  # if it's a non-git dir, clean it up
+		git clone "$project_repo" "$project_name"
+		echo "$project_name cloned"
+	fi
+
 }
 
 # the plots repos are reset every time
