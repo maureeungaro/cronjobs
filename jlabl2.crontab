@@ -11,8 +11,9 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 # make sure clas12Tags is updaded, used for the next crontab
-# stage artifacts in /work - notice because of firewall this only works on jlabl2
+# stage artifacts in /work - notice because of firewall this only can only be done on jlabl2
 2 * * * *   flock -n "$HOME/.plots.lock" "$HOME/cronjobs/update_mauriplots_jlabl2.zsh" || { [ "$?" -eq 1 ] && echo "$(date) update_mauriplots_jlabl2 skipped: lock busy" >> "$HOME/cronjobs/cronplots.log"; }
+20 * * * * flock -n "$HOME/.cvmfs.lock" "$HOME/cronjobs/stage_ci_artifacts.zsh"       || { [ "$?" -eq 1 ] && echo "$(date) cvmfs stage artifact installed skipped: lock busy" >> "$HOME/cronjobs/cron.log"; }
 
 
 

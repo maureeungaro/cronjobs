@@ -10,9 +10,8 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 
-# sync artifacts from /work
-*/10 * * * * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/sync_staged_to_cvmfs.zsh  || echo "$(date) cvmfs sync artifact installed skipped: lock busy"
-20 * * * * flock -n "$HOME/.cvmfs.lock" "$HOME/cronjobs/stage_ci_artifacts.zsh"       || { [ "$?" -eq 1 ] && echo "$(date) cvmfs stage artifact installed skipped: lock busy" >> "$HOME/cronjobs/cron.log"; }
+# sync artifacts to cvmfs from /work, can only be done in 2402
+10 * * * * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/sync_staged_to_cvmfs.zsh  || echo "$(date) cvmfs sync artifact installed skipped: lock busy"
 
 
 
