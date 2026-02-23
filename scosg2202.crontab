@@ -13,7 +13,6 @@ s=/home/gemc/software/Submit/utils/scripts/
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 #
-#
 # Submit jobs, log the OSG usage and prioritize them:
 */6 *  *  *  * flock -n $HOME/.submit.lock      $s/gemcSubmitCron.sh >& $HOME/logs/submitCron.log   >/dev/null 2>&1
 */10 *  *  *  * flock -n $HOME/.jlog.lock        $s/osgQuery.sh       >& $HOME/logs/osgQuery.log     >/dev/null 2>&1
