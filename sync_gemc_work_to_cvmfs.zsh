@@ -6,12 +6,12 @@ usage() {
 sync_staged_to_cvmfs.zsh - Sync staged artifacts + experiments into /scigroup CVMFS locations.
 
 Reads from:
-  <workdir>/stage/<distro>/clas12Tags/dev/experiments
-  <workdir>/stage/<distro>/clas12Tags/mlibrary/dev
+  <workdir>/stage/<distro>/clas12Tags/<gt>/experiments
+  <workdir>/stage/<distro>/mlibrary/<mt>
 
 Writes to:
-  expdir[<distro>] (dev/experiments)
-  and to the matching <root>/mlibrary/dev
+  expdir[<distro>] (<gt>/experiments)
+  and to the matching <root>/mlibrary/<mt>
 
 Usage:
   sync_staged_to_cvmfs.zsh [options]
@@ -19,6 +19,8 @@ Usage:
 Options:
   -w, --workdir DIR     Working directory (default: /work/clas12/ungaro/tmp)
   -d, --distros LIST    Comma-separated list (default: fedora,almalinux)
+      --gt TAG          gemc tag (default: dev)
+      --mt TAG          mlibrary tag (default: dev)
       --dry-run         Print actions, do not modify filesystem
   -h, --help            Show this help
 
@@ -35,6 +37,9 @@ dry_run=0
 workdir=/work/clas12/ungaro/tmp
 repo_name=clas12Tags
 distros_csv="fedora,almalinux"
+
+gt="dev"   # gemc tag
+mt="dev"   # mlibrary tag
 
 distros=(fedora almalinux)
 
@@ -53,20 +58,28 @@ while (($#)); do
 			;;
 		-w | --workdir)
 			workdir="${2:?missing value for $1}"
-			shift                                                    2
+			shift 2
 			;;
 		-d | --distros)
 			distros_csv="${2:?missing value for $1}"
-			shift                                                        2
+			shift 2
+			;;
+		--gt)
+			gt="${2:?missing value for $1}"
+			shift 2
+			;;
+		--mt)
+			mt="${2:?missing value for $1}"
+			shift 2
 			;;
 		-h | --help)
 			usage
-			exit                  0
+			exit 0
 			;;
 		*)
-			print   -u2 -- "Unknown option: $1"
+			print -u2 -- "Unknown option: $1"
 			usage
-			exit                                             2
+			exit 2
 			;;
 	esac
 done
@@ -75,8 +88,8 @@ done
 # Helpers
 # -----------------------------
 die() {
-	print      -u2 -- "ERROR: $*"
-	exit                                1
+	print -u2 -- "ERROR: $*"
+	exit 1
 }
 ensure_dir() { mkdir -p -- "${1:?missing dir}"; }
 
@@ -104,11 +117,10 @@ ensure_bin_exec() {
   fi
 }
 
-
 # -----------------------------
 # Main
 # -----------------------------
-((dry_run))   && echo "Running in --dry-run mode: no changes will be made."
+((dry_run)) && echo "Running in --dry-run mode: no changes will be made."
 
 have rsync || die "rsync not found on this machine; install/load it."
 
@@ -120,33 +132,36 @@ distros=("${(@s:,:)distros_csv}")
 echo
 echo "Syncing distros: ${distros[*]}"
 echo "Stage base: $stage_base"
+echo "Tags: gt=${gt} mt=${mt}"
 
 for d in "${distros[@]}"; do
 	[[ -n "${expdir[$d]:-}" ]] || die "No expdir mapping for distro '$d'"
 
 	stage_root="${stage_base}/${d}/${repo_name}"
-	src_dev="${stage_root}/dev"
-	src_exp="${stage_root}/dev/experiments"
-	src_mlib="${stage_base}/${d}/mlibrary/dev"
+	src_tag="${stage_root}/${gt}"
+	src_exp="${src_tag}/experiments"
+	src_mlib="${stage_base}/${d}/mlibrary/${mt}"
 
 	[[ -d "$src_exp" ]] || die "Staged experiments not found: $src_exp"
 
-	tgt_exp="${expdir[$d]}"                 # .../clas12Tags/dev/experiments
-	tgt_dev="${tgt_exp%/experiments}"       # .../clas12Tags/dev
+	# rewrite expdir[...] from .../clas12Tags/dev/experiments -> .../clas12Tags/<gt>/experiments
+	tgt_exp="${expdir[$d]%/clas12Tags/dev/experiments}/clas12Tags/${gt}/experiments"
+	tgt_tag="${tgt_exp%/experiments}"   # .../clas12Tags/<gt>
 
-	base="${tgt_dev%/clas12Tags/dev}"       # .../<distro-root> (sibling of clas12Tags)
-	tgt_mlib="${base}/mlibrary/dev"         # .../<distro-root>/mlibrary/dev
+	# derive distro root and mlibrary target from tgt_tag
+	base="${tgt_tag%/clas12Tags/${gt}}" # .../<distro-root> (sibling of clas12Tags)
+	tgt_mlib="${base}/mlibrary/${mt}"   # .../<distro-root>/mlibrary/<mt>
 
 	echo
 	echo "---- Sync: $d ----"
+	echo "  src_tag : $src_tag"
+	echo "  tgt_tag : $tgt_tag"
 	echo "  src_exp : $src_exp"
 	echo "  tgt_exp : $tgt_exp"
-	echo "  src_dev : $src_dev"
-	echo "  tgt_dev : $tgt_dev"
 	echo "  src_mlib: $src_mlib"
 	echo "  tgt_mlib: $tgt_mlib"
 
-	ensure_dir "$tgt_dev"
+	ensure_dir "$tgt_tag"
 	ensure_dir "$tgt_exp"
 	ensure_dir "$tgt_mlib"
 
@@ -156,20 +171,20 @@ for d in "${distros[@]}"; do
 	(( dry_run )) && rsync_copy+=(-n -v)
 	(( dry_run )) && rsync_mirror+=(-n -v)
 
-	# 1) Copy/update dev/ WITHOUT pruning
-	[[ -d "$src_dev" ]] || die "Staged dev not found: $src_dev"
-	run "rsync ${(@q)rsync_copy} ${(qq)src_dev}/ ${(qq)tgt_dev}/"
-	ensure_bin_exec "$tgt_dev/bin"
+	# 1) Copy/update <gt>/ WITHOUT pruning
+	[[ -d "$src_tag" ]] || die "Staged tag not found: $src_tag"
+	run "rsync ${(@q)rsync_copy} ${(qq)src_tag}/ ${(qq)tgt_tag}/"
+	ensure_bin_exec "$tgt_tag/bin"
 
-	# 2) Mirror dev/experiments WITH pruning
+	# 2) Mirror <gt>/experiments WITH pruning
 	[[ -d "$src_exp" ]] || die "Staged experiments not found: $src_exp"
 	run "rsync ${(@q)rsync_mirror} ${(qq)src_exp}/ ${(qq)tgt_exp}/"
 
-	# 1) Copy/update mlibrary WITHOUT pruning
+	# 3) Copy/update mlibrary/<mt> WITHOUT pruning
 	if [[ -d "$src_mlib" ]]; then
 	  run "rsync ${(@q)rsync_copy} ${(qq)src_mlib}/ ${(qq)tgt_mlib}/"
 	else
-	  echo "NOTE: staged mlibrary/dev not found for $d (skipping mlibrary sync)"
+	  echo "NOTE: staged mlibrary/${mt} not found for $d (skipping mlibrary sync)"
 	fi
 
 done
