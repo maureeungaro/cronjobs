@@ -11,8 +11,7 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 # sync artifacts to cvmfs from /work, can only be done in 2402
-10 * * * * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/sync_gemc_work_to_cvmfs.zsh || echo "$(date) cvmfs sync gemc from work skipped: lock busy"
-
+10 * * * * flock -n $HOME/.cvmfs.lock $HOME/cronjobs/sync_gemc_work_to_cvmfs.zsh || { [ "$?" -eq 1 ] && echo "$(date) cvmfs sync gemc from work skippe: lock busy" >> "$HOME/cronjobs/logs/osglog.log"; }
 
 
 
