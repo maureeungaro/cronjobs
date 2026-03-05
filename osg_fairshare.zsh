@@ -1,11 +1,11 @@
 #!/bin/zsh
 
-days='14'
+days='25'
 algo='aging_interleaved'
 half_life_days='0.25'
-history_half_life_days='4'
+history_half_life_days='5'
 queue_penalty='0.5'
-user_bust='5'
+user_bust='3'
 
 cd /group/clas/www/gemc/html/web_interface/data
 
