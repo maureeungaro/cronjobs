@@ -2,7 +2,7 @@
 
 days='25'
 algo='aging_interleaved'
-half_life_days='0.5'
+half_life_days='1.0'
 history_half_life_days='5'
 queue_penalty='0.5'
 user_bust='2'
