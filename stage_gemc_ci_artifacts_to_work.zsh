@@ -36,7 +36,7 @@ workdir=/work/clas12/ungaro/tmp
 repo_url=https://github.com/gemc/clas12Tags.git
 repo_name=clas12Tags
 repo_subdir=experiments
-get_artifact_py_rel=bin/get_last_ci_artifact.py
+artifact_py=$HOME/cronjobs/bin/get_last_ci_artifact.py
 distros_csv="fedora,almalinux"
 
 gt="dev"   # gemc tag
@@ -100,7 +100,6 @@ sync_repo() {
 ensure_dir "$workdir"
 sync_repo "$workdir" "$repo_url" "$repo_name"
 repo_root="$(pwd)"  # inside repo
-artifact_py="${repo_root}/${get_artifact_py_rel}"
 [[ -f "$artifact_py" ]] || die "Artifact script not found: $artifact_py"
 
 stage_base="${workdir}/stage"
