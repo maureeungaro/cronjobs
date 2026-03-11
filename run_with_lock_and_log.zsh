@@ -114,7 +114,12 @@ fi
 
 # Any other nonzero rc is treated as a real failure.
 # We intentionally write to stderr so cron will email it.
-echo "$(date) ${script_base} failed with exit code $rc" >&2
+echo "===== cron wrapper failure =====" >&2
+echo "date:    $(date)" >&2
+echo "machine: $(hostname)" >&2
+echo "script:  $script" >&2
+echo "rc:      $rc" >&2
+echo "================================" >&2
 
 # If the wrapped script produced stderr, include it in the email body.
 # This is useful for diagnosing the failure from the cron email itself.
