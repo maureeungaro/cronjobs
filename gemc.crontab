@@ -2,6 +2,7 @@ SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=ungaro@jlab.org
 
+# run_with_lock_and_log is a wrapper that sends email only when there's an error
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
 # |  |  .---------- day of month (1 - 31)
@@ -10,11 +11,7 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 
-# sync artifacts to cvmfs from /work, can only be done in 2402
-*/20 * * * * flock -n $HOME/.prio.lock $HOME/cronjobs/osg_fairshare.zsh  || { [ "$?" -eq 1 ] && echo "$(date) osg fairshare script skipped: lock busy" >> "$HOME/cronjobs/logs/fairshare.log"; }
-
-
-
-
+# calculate fairshare and write json file
+*/20 * * * * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/osg_fairshare.zsh
 
 

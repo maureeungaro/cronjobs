@@ -2,6 +2,7 @@ SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=ungaro@jlab.org
 
+# run_with_lock_and_log is a wrapper that sends email only when there's an error
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
 # |  |  .---------- day of month (1 - 31)
@@ -10,10 +11,9 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 
-# make sure clas12Tags is updaded, used for the next crontab
 # stage artifacts in /work - notice because of firewall this only can only be done on jlabl2
-2 * * * *   flock -n "$HOME/.plots.lock"      "$HOME/cronjobs/update_mauriplots_jlabl2.zsh"        || { [ "$?" -eq 1 ] && echo "$(date) update_mauriplots_jlabl2 skipped: lock busy"            >> "$HOME/cronjobs/logs/cronplots.log"; }
-20 * * * * flock -n "$HOME/.stage_gemc.lock" "$HOME/cronjobs/stage_gemc_ci_artifacts_to_work.zsh" || { [ "$?" -eq 1 ] && echo "$(date) cvmfs stage gemc artifact installed skipped: lock busy" >> "$HOME/cronjobs/logs/cron_stage_gemc.log"; }
+2 * * * *   $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_mauriplots_jlabl2.zsh
+20 * * * * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/stage_gemc_ci_artifacts_to_work.zsh
 
 
 

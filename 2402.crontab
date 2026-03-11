@@ -2,6 +2,7 @@ SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=ungaro@jlab.org
 
+# run_with_lock_and_log is a wrapper that sends email only when there's an error
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
 # |  |  .---------- day of month (1 - 31)
@@ -11,7 +12,7 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 # sync artifacts to cvmfs from /work, can only be done in 2402
-10 * * * *       flock -n $HOME/.cvmfs.lock $HOME/cronjobs/sync_gemc_work_to_cvmfs.zsh || { [ "$?" -eq 1 ] && echo "$(date) cvmfs sync gemc from work skippe: lock busy" >> "$HOME/cronjobs/logs/osglog.log"; }
+10 * * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/sync_gemc_work_to_cvmfs.zsh
 
 
 
