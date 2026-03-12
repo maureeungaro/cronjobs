@@ -8,7 +8,6 @@ fi
 
 path="$1"
 
-
 days='25'
 algo='aging_interleaved'
 half_life_days='1.0'
@@ -17,8 +16,7 @@ queue_penalty='0.5'
 user_bust='2'
 
 cd $path
-
-python3 /home/ungaro/simGrid/db_io/priority_submissions.py \
+/usr/bin/python3 /home/ungaro/simGrid/db_io/priority_submissions.py \
  -c ~/msql_conn.txt \
  -d $days \
  --priority-algorithm $algo \
