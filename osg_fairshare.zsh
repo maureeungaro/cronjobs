@@ -1,5 +1,14 @@
 #!/bin/zsh
 
+# Require at least one argument: the directory where the json is written
+if [ "$#" -lt 1 ]; then
+	echo "Usage: $0 /full/path/to/portal/data" >&2
+	exit 2
+fi
+
+path="$1"
+
+
 days='25'
 algo='aging_interleaved'
 half_life_days='1.0'
@@ -7,7 +16,7 @@ history_half_life_days='5'
 queue_penalty='0.5'
 user_bust='2'
 
-cd /group/clas/www/gemc/html/web_interface/data
+cd $path
 
 python3 /home/ungaro/simGrid/db_io/priority_submissions.py \
  -c ~/msql_conn.txt \
