@@ -13,5 +13,6 @@ MAILTO=ungaro@jlab.org
 
 # calculate fairshare and write json file
 */20 * * * * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/osg_fairshare.zsh
+53 */2 * * *   $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/update_portal_software.zsh
 
 
