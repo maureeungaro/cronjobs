@@ -10,9 +10,9 @@ path="$1"
 
 days='25'
 algo='aging_interleaved'
-half_life_days='1.0'
+half_life_days='2.0'
 history_half_life_days='5'
-queue_penalty='0.5'
+queue_penalty='1.0'
 user_bust='2'
 
 cd $path
