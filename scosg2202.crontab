@@ -4,6 +4,7 @@ MAILTO=baltzell@jlab.org,ungaro@jlab.org
 #,devita@jlab.org,mckinnon@jlab.org
 d=/home/gemc/sw/utilities/osg/bin
 s=/home/gemc/software/Submit/utils/scripts/
+sg=/home/gemc/software/simGrid
 #
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
@@ -14,9 +15,9 @@ s=/home/gemc/software/Submit/utils/scripts/
 # *  *  *  *  * user-name  command to be executed
 #
 # Submit jobs, log the OSG usage and prioritize them:
-*/6 *  *  *  * flock -n $HOME/.submit.lock      $s/gemcSubmitCron.sh >& $HOME/logs/submitCron.log   >/dev/null 2>&1
-*/10 *  *  *  * flock -n $HOME/.jlog.lock        $s/osgQuery.sh       >& $HOME/logs/osgQuery.log     >/dev/null 2>&1
-*/30   *  *  *  * flock -n $HOME/.osgpriority.lock $s/priorityCron.sh   >& $HOME/logs/priorityCron.log >/dev/null 2>&1
+*/6 *  *  *  * flock -n     $HOME/.submit.lock      $s/gemcSubmitCron.sh                             >& $HOME/logs/submitCron.log    >/dev/null 2>&1
+*/10 *  *  *  * flock -n   $HOME/.jlog.lock        $s/osgQuery.sh                                   >& $HOME/logs/osgQuery.log      >/dev/null 2>&1
+*/30   *  *  *  * flock -n $HOME/.osgpriority.lock python3 $sg/condor_io/run_priority_map.py -p -a  >& $HOME/logs/priorityCron.log  >/dev/null 2>&1
 #
 # Update a "pretty" condor table:
 33 0-22/2  *  *  * flock -n $HOME/.condor.lock $d/condor-probe.py -summary >& $HOME/logs/condor.txt >/dev/null 2>&1
