@@ -52,8 +52,7 @@ def gh_get(url: str, token: str, params=None):
 		status=5,
 		backoff_factor=1.5,
 		status_forcelist=[429, 500, 502, 503, 504],
-		allowed_methods=["GET"],
-		respect_retry_after_header=True,
+		method_whitelist=frozenset(["GET"]),
 	)
 	adapter = HTTPAdapter(max_retries=retry)
 	session.mount("https://", adapter)
@@ -72,16 +71,7 @@ def gh_get(url: str, token: str, params=None):
 			"- The token may be expired, revoked, or not the one you intended (\"not renewed\").\n"
 			"- Confirm the token file (~/.mauri) contains the correct current token.\n"
 			f"- Token fingerprint (safe): prefix={tok_prefix}  length={tok_len}\n"
-			"- If you are using a classic PAT, 'Authorization: token <PAT>' should work.\n"
-			"- If you are using a fine-grained PAT, ensure the repository is allowed and\n"
-			"  the required permissions (e.g., Actions: Read) are enabled.\n"
 			f"Response: {r.text}"
-		)
-
-	if r.status_code >= 500:
-		die(
-			f"GitHub server error {r.status_code} for {url}\n"
-			f"Response: {r.text[:500]}"
 		)
 
 	r.raise_for_status()
