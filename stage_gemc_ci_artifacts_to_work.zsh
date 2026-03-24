@@ -85,7 +85,10 @@ sync_repo() {
   echo "Cloning or pulling ${name} repo in ${wd}"
   if [[ -d "$name/.git" ]]; then
     cd "$name"
-    run "git pull --ff-only"
+	if ! run git pull --ff-only; then
+	  echo "git pull failed in $repo" >&2
+	  exit 1
+	fi
   else
     run "git clone ${(qq)url} ${(qq)name}"
     cd "$name"

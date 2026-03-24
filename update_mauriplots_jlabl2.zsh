@@ -5,6 +5,9 @@
 # - slides
 # - pubs
 
+# strict errors handling
+set -eu
+
 function pull_or_clone() {
 
 	# if 'plots/' is the prefix	of $project_name, the basedir is /userweb/ungaro/public_html/plots
@@ -24,7 +27,6 @@ function pull_or_clone() {
 	echo "project_name: $project_name"
 	echo "project_repo: $project_repo"
 
-
 	cd $basedir || exit
 	# optional reset argument will remove and re-clone the repo
 	if [[ $# -ge 3 && $3 == "reset" ]]; then
@@ -33,11 +35,16 @@ function pull_or_clone() {
 
 	if [[ -d "$project_name/.git" ]]; then
 		cd "$project_name" || exit
+
 		# safer for cron: don't create merge commits; fail if non-ff needed
-		git pull --ff-only
+		if ! git pull --ff-only; then
+			echo "git pull failed in $repo" >&2
+			exit 1
+		fi
+
 		echo "$project_name pulled"
 	else
-		rm -rf "$project_name"  # if it's a non-git dir, clean it up
+		rm -rf "$project_name" # if it's a non-git dir, clean it up
 		git clone "$project_repo" "$project_name"
 		echo "$project_name cloned"
 	fi
