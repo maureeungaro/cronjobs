@@ -7,7 +7,9 @@ import io
 import requests
 import subprocess
 import tempfile
-
+import time
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 def die(msg, code=1):
 	print(msg, file=sys.stderr)
@@ -39,11 +41,29 @@ def gh_get(url: str, token: str, params=None):
 		"Authorization": f"Bearer {token}",
 		"Accept":        "application/vnd.github+json",
 		"User-Agent":    "gemc-ci-fetcher",
+		"X-GitHub-Api-Version": "2022-11-28",
 	}
 
-	r = requests.get(url, headers=headers, params=params, timeout=60)
-	# Surface helpful details on 401
-	# Surface helpful details on 401
+	session = requests.Session()
+	retry = Retry(
+		total=5,
+		connect=5,
+		read=5,
+		status=5,
+		backoff_factor=1.5,
+		status_forcelist=[429, 500, 502, 503, 504],
+		allowed_methods=["GET"],
+		respect_retry_after_header=True,
+	)
+	adapter = HTTPAdapter(max_retries=retry)
+	session.mount("https://", adapter)
+	session.mount("http://", adapter)
+
+	try:
+		r = session.get(url, headers=headers, params=params, timeout=(20, 60))
+	except requests.exceptions.RequestException as e:
+		die(f"GitHub request failed for {url}\nError: {e}")
+
 	if r.status_code == 401:
 		tok_len = len(token)
 		tok_prefix = token[:10] + "…" if tok_len >= 10 else token
@@ -56,6 +76,12 @@ def gh_get(url: str, token: str, params=None):
 			"- If you are using a fine-grained PAT, ensure the repository is allowed and\n"
 			"  the required permissions (e.g., Actions: Read) are enabled.\n"
 			f"Response: {r.text}"
+		)
+
+	if r.status_code >= 500:
+		die(
+			f"GitHub server error {r.status_code} for {url}\n"
+			f"Response: {r.text[:500]}"
 		)
 
 	r.raise_for_status()
