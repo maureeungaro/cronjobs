@@ -89,7 +89,7 @@ append_stderr_to_log() {
 # Redirections:
 #   > /dev/null   : discard normal stdout from the wrapped script
 #   2> "$errfile" : capture wrapped script stderr into a temp file
-flock -n "$lockfile" "$script" "$@" > /dev/null 2> "$errfile"
+flock -n -E 75 "$lockfile" "$script" "$@" > /dev/null 2> "$errfile"
 rc=$?
 
 # rc=0 means the wrapped script ran successfully.
@@ -113,7 +113,7 @@ fi
 # rc=1 from flock -n means lock busy in this usage.
 # We write a log entry but print nothing to stdout/stderr,
 # so cron sends no email.
-if [ "$rc" -eq 1 ]; then
+if [ "$rc" -eq 75 ]; then
 	{
 		echo "===== lock busy ====="
 		echo "date:    $(date)"
