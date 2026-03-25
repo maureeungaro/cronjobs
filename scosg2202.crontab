@@ -15,9 +15,9 @@ sg=/home/gemc/software/simGrid
 # *  *  *  *  * user-name  command to be executed
 #
 # Submit jobs, log the OSG usage and prioritize them:
-*/6 *  *  *  * flock -n     $HOME/.submit.lock      $s/gemcSubmitCron.sh                             >& $HOME/logs/submitCron.log    >/dev/null 2>&1
-*/10 *  *  *  * flock -n   $HOME/.jlog.lock        $s/osgQuery.sh                                   >& $HOME/logs/osgQuery.log      >/dev/null 2>&1
-*/30   *  *  *  * flock -n $HOME/.osgpriority.lock python3 $sg/condor_io/run_priority_map.py -p -a  >& $HOME/logs/priorityCron.log  >/dev/null 2>&1
+*/6 *  *  *  *   $sg/run_with_lock_and_log.zsh $s/gemcSubmitCron.sh
+*/10 *  *  *  * $sg/run_with_lock_and_log.zsh $s/osgQuery.sh
+*/16 *  *  *  * $sg/run_with_lock_and_log.zsh $sg/condor_io/run_priority_map.py -p -a
 #
 # Update a "pretty" condor table:
 33 0-22/2  *  *  * flock -n $HOME/.condor.lock $d/condor-probe.py -summary >& $HOME/logs/condor.txt >/dev/null 2>&1

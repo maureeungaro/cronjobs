@@ -3,6 +3,26 @@
 set -u
 cleanup_days=5
 
+# logdir can be set by c.l. 
+logdir_default="$HOME/cronjobs/logs"
+logdir="$logdir_default"
+
+while getopts ":l:" opt; do
+	case "$opt" in
+		l) logdir="$OPTARG" ;;
+		:)
+			echo "Error: -$OPTARG requires an argument" >&2
+			exit 2
+			;;
+		\?)
+			echo "Error: invalid option: -$OPTARG" >&2
+			echo "Usage: $0 [-l logdir] /full/path/to/script [args ...]" >&2
+			exit 2
+			;;
+	esac
+done
+shift $((OPTIND - 1))
+
 # cronjob sends an email whenever there is stdout or stderr
 # in this script:
 # - usage error in the wrapper: emailed
@@ -51,7 +71,6 @@ script_base="${script_name:r}"
 
 # Build lock and log paths automatically from the target script name.
 lockfile="$HOME/.${script_base}.lock"
-logdir="$HOME/cronjobs/logs"
 
 # Timestamped log file, for example:
 #   ~/cronjobs/logs/osg_fairshare-20260318-142530.log
