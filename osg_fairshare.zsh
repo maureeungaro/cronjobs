@@ -12,7 +12,7 @@ days='25'
 algo='aging_interleaved'
 half_life_days='2.0'
 history_half_life_days='5'
-queue_penalty='1.0'
+queue_penalty='2.0'
 user_bust='2'
 
 cd $path
