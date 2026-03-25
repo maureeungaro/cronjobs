@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 set -u
+cleanup_days=5
 
 # cronjob sends an email whenever there is stdout or stderr
 # in this script:
@@ -63,9 +64,8 @@ mkdir -p "$logdir" || {
 	exit 2
 }
 
-# Remove matching log files older than 2 weeks.
-# -mtime +13 means strictly older than 14 days.
-find "$logdir" -type f -name "${script_base}-*.log" -mtime +13 -delete 2>/dev/null
+purge_mtime=$((cleanup_days - 1))
+find "$logdir" -type f -name "${script_base}-*.log" -mtime +"$purge_mtime" -delete 2>/dev/null
 
 # Create a temporary file to capture stderr from the wrapped script.
 errfile=$(mktemp) || {
@@ -80,16 +80,29 @@ append_stderr_to_log() {
 			echo "----- ${script_base} stderr begin -----"
 			cat "$errfile"
 			echo "----- ${script_base} stderr end -----"
-		} >> "$logfile"
+		} >>"$logfile"
 	fi
 }
+
+{
+	echo "===== wrapped script run ====="
+	echo "date:       $(date)"
+	echo "machine:    $(hostname)"
+	echo "script:     $script"
+	echo "args:       $*"
+	echo "lockfile:   $lockfile"
+	echo "lock_state: attempting non-blocking lock"
+	echo "logfile:    $logfile"
+	echo "=============================="
+} >>"$logfile"
 
 # Run the target script under a non-blocking flock lock.
 #
 # Redirections:
-#   > /dev/null   : discard normal stdout from the wrapped script
-#   2> "$errfile" : capture wrapped script stderr into a temp file
-flock -n -E 75 "$lockfile" "$script" "$@" > /dev/null 2> "$errfile"
+# appends wrapped-script stdout to the log
+# still captures stderr separately
+# makes lock-busy return 75 instead of ambiguous 1
+flock -n -E 75 "$lockfile" "$script" "$@" >>"$logfile"  2>"$errfile"
 rc=$?
 
 # rc=0 means the wrapped script ran successfully.
@@ -104,7 +117,7 @@ if [ "$rc" -eq 0 ]; then
 			echo "script:  $script"
 			echo "rc:      $rc"
 			echo "================================="
-		} >> "$logfile"
+		} >>"$logfile"
 		append_stderr_to_log
 	fi
 	exit 0
@@ -116,12 +129,17 @@ fi
 if [ "$rc" -eq 75 ]; then
 	{
 		echo "===== lock busy ====="
-		echo "date:    $(date)"
-		echo "machine: $(hostname)"
-		echo "script:  $script"
-		echo "message: ${script_base} skipped: lock busy"
+		echo "date:       $(date)"
+		echo "machine:    $(hostname)"
+		echo "script:     $script"
+		echo "args:       $*"
+		echo "lockfile:   $lockfile"
+		echo "lock_state: busy"
+		echo "message:    ${script_base} skipped: lock busy"
+		echo "logfile:    $logfile"
 		echo "====================="
-	} >> "$logfile"
+	} >>"$logfile"
+	append_stderr_to_log
 	exit 0
 fi
 
@@ -130,22 +148,28 @@ fi
 # and also to stderr so cron will email it.
 {
 	echo "===== cron wrapper failure ====="
-	echo "date:    $(date)"
-	echo "machine: $(hostname)"
-	echo "script:  $script"
-	echo "rc:      $rc"
-	echo "logfile: $logfile"
+	echo "date:       $(date)"
+	echo "machine:    $(hostname)"
+	echo "script:     $script"
+	echo "args:       $*"
+	echo "rc:         $rc"
+	echo "lockfile:   $lockfile"
+	echo "lock_state: wrapper failure after lock attempt"
+	echo "logfile:    $logfile"
 	echo "================================"
-} >> "$logfile"
+} >>"$logfile"
 
 append_stderr_to_log
 
 echo "===== cron wrapper failure =====" >&2
-echo "date:    $(date)" >&2
-echo "machine: $(hostname)" >&2
-echo "script:  $script" >&2
-echo "rc:      $rc" >&2
-echo "logfile: $logfile" >&2
+echo "date:       $(date)" >&2
+echo "machine:    $(hostname)" >&2
+echo "script:     $script" >&2
+echo "args:       $*" >&2
+echo "rc:         $rc" >&2
+echo "lockfile:   $lockfile" >&2
+echo "lock_state: wrapper failure after lock attempt" >&2
+echo "logfile:    $logfile" >&2
 echo "================================" >&2
 
 if [ -s "$errfile" ]; then
