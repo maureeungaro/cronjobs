@@ -3,7 +3,7 @@
 set -u
 cleanup_days=5
 
-# logdir can be set by c.l. 
+# logdir can be set by c.l.
 logdir_default="$HOME/cronjobs/logs"
 logdir="$logdir_default"
 

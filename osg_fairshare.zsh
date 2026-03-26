@@ -8,7 +8,7 @@ fi
 
 path="$1"
 
-days='25'
+days='60'
 algo='aging_interleaved'
 half_life_days='2.0'
 history_half_life_days='5'
