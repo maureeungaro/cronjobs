@@ -13,5 +13,6 @@ MAILTO=ungaro@jlab.org
 
 # osgLog.sh copies the query log from /volatile to the web location
 # pull_clas12-config.sh syncs the osg portal clas12-config
-01,11,21,31,41,51   *  *  *  * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/osgLog.sh
-20             1-23/2  *  *  *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_clas12-config.sh
+01,11,21,31,41,51  *  *  *  * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/osgLog.sh
+20            1-23/2  *  *  *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_clas12-config.sh
+2, 22, 42          *  *  *  *$HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh

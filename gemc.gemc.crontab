@@ -12,9 +12,9 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 # calculate fairshare and write json file
-*/32 * * * * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/osg_fairshare.zsh /home/gemc/html/main/simGrid/web_portal/data
-53 */2 * * *   $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_portal_software.zsh
-*/11 * * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_data.zsh
-*/22 * * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
+*/32      *   * * *   $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/osg_fairshare.zsh /home/gemc/html/main/simGrid/web_portal/data
+53        */2 * * *     $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_portal_software.zsh
+*/11      *   * * *    $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_data.zsh
+4, 24, 44 *   * * * $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
 
 
