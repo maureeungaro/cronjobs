@@ -7,6 +7,9 @@ if [ "$#" -lt 1 ]; then
 fi
 
 path="$1"
+# in /home until gemc is the only one running - then can remove simlink
+priority_submissions=$HOME/html/main/simGrid/db_io/priority_submissions.py
+priority_submissions=$HOME/simGrid/db_io/priority_submissions.py
 
 days='60'
 algo='aging_interleaved'
@@ -17,12 +20,12 @@ user_bust='2'
 
 cd $path
 
-if [[ ! -f $HOME/simGrid/db_io/priority_submissions.py ]]; then
+if [[ ! -f $priority_submissions ]]; then
 	echo "simGrid is not installed or not in $HOME. Exiting."
 	exit 1
 fi
 
-/usr/bin/python3 $HOME/simGrid/db_io/priority_submissions.py \
+/usr/bin/python3 $priority_submissions \
 	-c ~/msql_conn.txt \
 	-d $days \
 	--priority-algorithm $algo \

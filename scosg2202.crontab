@@ -1,7 +1,5 @@
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
-MAILTO=baltzell@jlab.org,ungaro@jlab.org
-#,devita@jlab.org,mckinnon@jlab.org
 d=/home/gemc/sw/utilities/osg/bin
 s=/home/gemc/software/Submit/utils/scripts/
 sg=/home/gemc/software/simGrid
@@ -14,11 +12,16 @@ sg=/home/gemc/software/simGrid
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 #
+#
 # Submit jobs, log the OSG usage and prioritize them:
+MAILTO=ungaro@jlab.org
 */6 *  *  *  *   $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $s/gemcSubmitCron.sh
 */10 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $s/osgQuery.sh
-*/16 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/run_priority_map.py -p -a
+*/16 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/run_priority_map.py -p -a -m 10
 #
+#
+MAILTO=baltzell@jlab.org
+#,devita@jlab.org,mckinnon@jlab.org
 # Update a "pretty" condor table:
 33 0-22/2  *  *  * flock -n $HOME/.condor.lock $d/condor-probe.py -summary >& $HOME/logs/condor.txt >/dev/null 2>&1
 #
