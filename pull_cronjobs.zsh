@@ -39,4 +39,5 @@ case "$hmachine" in
 		;;
 esac
 
+echo Cronfile: "$cron_location/$cronfile"
 /usr/bin/crontab "$cron_location/$cronfile"
