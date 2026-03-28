@@ -13,7 +13,7 @@ cd
 
 case "$hmachine" in
 	ifarm2401)
-		cronfile="2401.gemc.crontab"
+		cronfile="2401.crontab"
 		;;
 	ifarm2402)
 		cronfile="2402.crontab"
