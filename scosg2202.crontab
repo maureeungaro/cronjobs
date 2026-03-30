@@ -2,7 +2,7 @@ SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 d=/home/gemc/sw/utilities/osg/bin
 s=/home/gemc/software/Submit/utils/scripts/
-sg=/home/gemc/software/simGrid
+sg=/home/gemc/software/simGrid/main
 #
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
