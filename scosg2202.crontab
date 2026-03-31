@@ -19,8 +19,8 @@ MAILTO=ungaro@jlab.org
 */10 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $s/osgQuery.sh
 */16 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/run_priority_map.py -p -a -m 10
 */16 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/run_priority_map.py -p -a -m 10
-2, 12, 22, 32, 42, 52 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c ~/software/Submit/msql_conn.txt  -dev -j logs/osg-devel.json
-4, 14, 24, 34, 44, 54 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c ~/software/Submit/msql_conn.txt       -j logs/osg-production.json
+2,12,22,32,42,52 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c ~/software/Submit/msql_conn.txt  -dev -j logs/osg-devel.json
+4,14,24,34,44,54 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c ~/software/Submit/msql_conn.txt       -j logs/osg-production.json
 #
 #
 MAILTO=baltzell@jlab.org
