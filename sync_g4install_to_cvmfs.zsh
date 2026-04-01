@@ -24,7 +24,7 @@ Description:
 
 Options:
   -h                  Show this help and exit.
-  -K                  Keep existing Apptainer cache/tmp dirs (do NOT rm -rf them).
+  -R                  Remove existing Apptainer cache/tmp dirs .
   -b <base_image>     Only process one base image (default: all).
                       Allowed: ubuntu | fedora | debian | almalinux | archlinux
   -g <geant4_version> Geant4 version tag (default: ${g4version})
@@ -37,14 +37,14 @@ EOF
 }
 
 # ---- option parsing ----
-keep_apptainer_dirs=0
+keep_apptainer_dirs=1
 selected_base_image=""
 
 # ---- option parsing ----
 while getopts ":hKb:g:r:" opt; do
   case "$opt" in
     h) usage; exit 0 ;;
-    K) keep_apptainer_dirs=1 ;;
+    R) keep_apptainer_dirs=0 ;;
     b) selected_base_image="$OPTARG" ;;
     g) g4version="$OPTARG" ;;
     r) registry_base_address="$OPTARG" ;;
