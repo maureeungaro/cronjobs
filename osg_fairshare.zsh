@@ -13,7 +13,7 @@ priority_submissions=$HOME/simGrid/db_io/priority_submissions.py
 
 days='60'
 algo='aging_interleaved'
-half_life_days='2.0'
+half_life_days='3.0'
 history_half_life_days='5'
 queue_penalty='2.0'
 user_bust='2'
