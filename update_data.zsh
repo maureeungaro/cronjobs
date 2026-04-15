@@ -1,12 +1,26 @@
 #!/bin/zsh
 
-html_location="$HOME/html"
-repo_names=("clas12-config" "simGrid")
-branches=("dev" "main")
+set -eu
 
-# copy  /group/clas/www/gemc/html/web_interface/data/osgLog.json to the data
-for branch in "${branches[@]}"; do
-	cp /group/clas/www/gemc/html/web_interface/data/osgLog.json         $html_location/$branch/web_portal/data
-	cp /group/clas/www/gemc/html/web_interface/data/osg-devel.json      $html_location/$branch/web_portal/data
-	cp /group/clas/www/gemc/html/web_interface/data/osg-production.json $html_location/$branch/web_portal/data
+html_location="${HOME}/html"
+
+typeset -A output_names=(
+	dev "osg-devel.json"
+	main "osg-production.json"
+)
+
+for branch output_name in ${(kv)output_names}; do
+	base_dir="${html_location}/${branch}"
+	data_dir="${base_dir}/web_portal/data"
+	script="${base_dir}/list_owner_submission.py"
+
+	[[ -x "${script}"   ]] || {
+		print  -u2 "Error: missing or non-executable script: ${script}"
+		exit  1
+	}
+
+	"${script}" --from-db -j "${data_dir}/${output_name}" || {
+		print -u2 "Error running ${script} for branch ${branch}"
+		exit 1
+	}
 done
