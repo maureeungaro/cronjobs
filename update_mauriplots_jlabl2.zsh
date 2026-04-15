@@ -63,8 +63,8 @@ repo=https://github.com/maureeungaro/slides
 pull_or_clone slides $repo
 
 repo=https://github.com/maureeungaro/pubs
-pull_or_clone pubs $repo
+#pull_or_clone pubs $repo
 
 # cloned inside /userweb/ungaro/public_html/slides
 repo=https://github.com/jeffersonlab/geant4-tutorials
-pull_or_clone geant4-tutorials $repo
+#pull_or_clone geant4-tutorials $repo
