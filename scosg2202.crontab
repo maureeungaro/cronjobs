@@ -15,10 +15,10 @@ sg=/home/gemc/software/simGrid/main
 #
 # Submit jobs, log the OSG usage and prioritize them:
 MAILTO=ungaro@jlab.org
-*/6 *  *  *  *   $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $s/gemcSubmitCron.sh
-*/10 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c msql_conn_rw.txt --store-db
-*/11 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c msql_conn_rw.txt --store-db  -dev
-*/16 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/run_priority_map.py -p -a -m 20
+*/6     *  *  *  *   $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $s/gemcSubmitCron.sh
+1-59/10 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c msql_conn_rw.txt --store-db
+2-59/10 *  *  *  * $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py -q -c msql_conn_rw.txt --store-db  -dev
+*/16    *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/run_priority_map.py -p -a -m 20
 #
 #
 MAILTO=baltzell@jlab.org
