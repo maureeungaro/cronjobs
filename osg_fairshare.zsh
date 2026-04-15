@@ -9,7 +9,6 @@ fi
 path="$1"
 # in /home until gemc is the only one running - then can remove simlink
 priority_submissions=$HOME/html/main/simGrid/db_io/priority_submissions.py
-priority_submissions=$HOME/simGrid/db_io/priority_submissions.py
 
 days='60'
 algo='aging_interleaved'
