@@ -5,7 +5,7 @@ set -eu
 html_location="${HOME}/html"
 
 typeset -A output_names=(
-	dev "osg-devel.json"
+	dev  "osg-devel.json"
 	main "osg-production.json"
 )
 
@@ -14,12 +14,16 @@ for branch output_name in ${(kv)output_names}; do
 	data_dir="${base_dir}/web_portal/data"
 	script="${base_dir}/condor_io/list_owner_submission.py"
 
-	[[ -x "${script}"   ]] || {
-		print  -u2 "Error: missing or non-executable script: ${script}"
-		exit  1
+	[[ -x "${script}" ]] || {
+		print -u2 "Error: missing or non-executable script: ${script}"
+		exit 1
 	}
 
-	"${script}" --from-db -j "${data_dir}/${output_name}" || {
+	args=(--from-db -j "${data_dir}/${output_name}")
+
+	[[ "${branch}" == "dev" ]] && args+=(-dev)
+
+	"${script}" "${args[@]}" || {
 		print -u2 "Error running ${script} for branch ${branch}"
 		exit 1
 	}
