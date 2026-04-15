@@ -10,7 +10,7 @@ typeset -A output_names=(
 )
 
 for branch output_name in ${(kv)output_names}; do
-	base_dir="${html_location}/${branch}"
+	base_dir="${html_location}/${branch}/simGrid"
 	data_dir="${base_dir}/web_portal/data"
 	script="${base_dir}/list_owner_submission.py"
 
