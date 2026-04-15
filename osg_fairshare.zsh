@@ -25,7 +25,7 @@ if [[ ! -f $priority_submissions ]]; then
 fi
 
 /usr/bin/python3 $priority_submissions \
-	-c ~/msql_conn.txt \
+	-c msql_conn.txt \
 	-d $days \
 	--priority-algorithm $algo \
 	--half-life-days $half_life_days \
