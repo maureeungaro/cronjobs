@@ -59,10 +59,10 @@ for r in $plots_r; do
 	pull_or_clone "plots/$r" "$repo/$r" reset
 done
 
-repo=https://github.com/maureeungaro/slides
+repo=git@github.com:maureeungaro/slides.git
 pull_or_clone slides $repo
 
-repo=https://github.com/maureeungaro/pubs
+repo=git@github.com:maureeungaro/pubs.git
 pull_or_clone pubs $repo
 
 # cloned inside /userweb/ungaro/public_html/slides
