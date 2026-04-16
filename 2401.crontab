@@ -11,4 +11,5 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 #
-2,22,42            *  *  *  *   $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
+20      *  *  *  *       $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_simgrid.zsh
+2-59/10 *  *  *  *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
