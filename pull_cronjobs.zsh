@@ -5,13 +5,11 @@ cron_location="$HOME/cronjobs"
 user="$(whoami)"
 hmachine=$(hostname -s)
 
-echo
-echo Pulling $cron_location
-cd   $cron_location
-git  pull
-cd
-
 case "$hmachine" in
+	enpungaro-m2)
+		cron_location="/opt/projects/cronjobs"
+		cronfile="enpungaro-m2.crontab"
+		;;
 	ifarm2401)
 		cronfile="2401.crontab"
 		;;
@@ -39,5 +37,11 @@ case "$hmachine" in
 		;;
 esac
 
-echo Cronfile: "$cron_location/$cronfile"
+echo
+echo Pulling $cron_location
+cd   $cron_location
+git  pull
+cd
+
+echo Crontabbing: "$cron_location/$cronfile"
 /usr/bin/crontab "$cron_location/$cronfile"
