@@ -13,8 +13,8 @@ MAILTO=ungaro@jlab.org
 
 cj=/opt/projects/cronjobs
 # stage artifacts in /work - notice because of firewall this only can only be done on jlabl2
-2 * * * *  $cj/cronjobs/run_with_lock_and_log.zsh -l $cj/logs $cj/cronjobs/diff_homes.zsh
-4 * * * *  $cj/cronjobs/run_with_lock_and_log.zsh -l $cj/logs $cj/cronjobs/pull_cronjobs.zsh
+2 * * * *  $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/diff_homes.zsh
+4 * * * *  $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/pull_cronjobs.zsh
 
 
 
