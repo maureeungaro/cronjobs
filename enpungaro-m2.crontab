@@ -1,5 +1,5 @@
 SHELL=/bin/bash
-PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/opt/homebrew//bin/
 MAILTO=ungaro@jlab.org
 
 # run_with_lock_and_log is a wrapper that sends email only when there's an error
