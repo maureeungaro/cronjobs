@@ -28,9 +28,10 @@ shift $((OPTIND - 1))
 # - usage error in the wrapper: emailed
 # - missing or non-executable target script: emailed
 # - cannot create log dir or temp file: emailed
-# - wrapped script returns nonzero other than 1: emailed
+# - wrapped script returns nonzero: emailed
+#   for diff jobs, rc=1 means differences were found
 # - wrapped script succeeds: no email
-# - lock busy (flock -n returns 1): no email, only log entry
+# - lock busy (flock -n returns 75 because of -E 75): no email, only log entry
 #
 # Additional behavior:
 # - log files are timestamped
@@ -38,6 +39,7 @@ shift $((OPTIND - 1))
 # - log files older than 2 weeks are removed automatically
 
 cleanup() {
+	[ -n "${outfile:-}" ] && [ -f "$outfile" ] && rm -f "$outfile"
 	[ -n "${errfile:-}" ] && [ -f "$errfile" ] && rm -f "$errfile"
 }
 
@@ -86,12 +88,26 @@ mkdir -p "$logdir" || {
 purge_mtime=$((cleanup_days - 1))
 find "$logdir" -type f -name "${script_base}-*.log" -mtime +"$purge_mtime" -delete 2>/dev/null
 
-# Create a temporary file to capture stderr from the wrapped script.
+# Create temporary files to capture stdout and stderr from the wrapped script.
+outfile=$(mktemp) || {
+	echo "Error: mktemp failed" >&2
+	exit 2
+}
+
 errfile=$(mktemp) || {
 	echo "Error: mktemp failed" >&2
 	exit 2
 }
 
+append_stdout_to_log() {
+	if [ -s "$outfile" ]; then
+		{
+			echo "----- ${script_base} stdout begin -----"
+			cat "$outfile"
+			echo "----- ${script_base} stdout end -----"
+		} >>"$logfile"
+	fi
+}
 # Helper: append wrapped-script stderr to the current log file, if any.
 append_stderr_to_log() {
 	if [ -s "$errfile" ]; then
@@ -118,31 +134,23 @@ append_stderr_to_log() {
 # Run the target script under a non-blocking flock lock.
 #
 # Redirections:
-# appends wrapped-script stdout to the log
+# captures wrapped-script stdout and stderr separately
+# later appends stdout/stderr to the log
 # still captures stderr separately
 # makes lock-busy return 75 instead of ambiguous 1
-flock -n -E 75 "$lockfile" "$script" "$@" >>"$logfile"  2>"$errfile"
+flock -n -E 75 "$lockfile" "$script" "$@" >"$outfile" 2>"$errfile"
 rc=$?
 
 # rc=0 means the wrapped script ran successfully.
-# We still save any wrapped-script stderr to the log file,
-# but we print nothing, so cron sends no email.
+# We save stdout/stderr to the log file,
+# but print nothing, so cron sends no email.
 if [ "$rc" -eq 0 ]; then
-	if [ -s "$errfile" ]; then
-		{
-			echo "===== wrapped script stderr ====="
-			echo "date:    $(date)"
-			echo "machine: $(hostname)"
-			echo "script:  $script"
-			echo "rc:      $rc"
-			echo "================================="
-		} >>"$logfile"
-		append_stderr_to_log
-	fi
+	append_stdout_to_log
+	append_stderr_to_log
 	exit 0
 fi
 
-# rc=1 from flock -n means lock busy in this usage.
+# rc=75 means lock busy because flock was called with -E 75.
 # We write a log entry but print nothing to stdout/stderr,
 # so cron sends no email.
 if [ "$rc" -eq 75 ]; then
@@ -158,38 +166,46 @@ if [ "$rc" -eq 75 ]; then
 		echo "logfile:    $logfile"
 		echo "====================="
 	} >>"$logfile"
+
+	append_stdout_to_log
 	append_stderr_to_log
 	exit 0
 fi
 
-# Any other nonzero rc is treated as a real failure.
-# We write details to the timestamped log file
-# and also to stderr so cron will email it.
+# Any other nonzero rc means the wrapped command returned nonzero.
+# For diff jobs, rc=1 usually means differences were found.
 {
-	echo "===== cron wrapper failure ====="
+	echo "===== wrapped script returned nonzero ====="
 	echo "date:       $(date)"
 	echo "machine:    $(hostname)"
 	echo "script:     $script"
 	echo "args:       $*"
 	echo "rc:         $rc"
 	echo "lockfile:   $lockfile"
-	echo "lock_state: wrapper failure after lock attempt"
+	echo "lock_state: not lock-busy; wrapped command returned nonzero"
 	echo "logfile:    $logfile"
-	echo "================================"
+	echo "==========================================="
 } >>"$logfile"
 
+append_stdout_to_log
 append_stderr_to_log
 
-echo "===== cron wrapper failure =====" >&2
+echo "===== wrapped script returned nonzero =====" >&2
 echo "date:       $(date)" >&2
 echo "machine:    $(hostname)" >&2
 echo "script:     $script" >&2
 echo "args:       $*" >&2
 echo "rc:         $rc" >&2
 echo "lockfile:   $lockfile" >&2
-echo "lock_state: wrapper failure after lock attempt" >&2
+echo "lock_state: not lock-busy; wrapped command returned nonzero" >&2
 echo "logfile:    $logfile" >&2
-echo "================================" >&2
+echo "===========================================" >&2
+
+if [ -s "$outfile" ]; then
+	echo "----- ${script_base} stdout begin -----" >&2
+	cat "$outfile" >&2
+	echo "----- ${script_base} stdout end -----" >&2
+fi
 
 if [ -s "$errfile" ]; then
 	echo "----- ${script_base} stderr begin -----" >&2
