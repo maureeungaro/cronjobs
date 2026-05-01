@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Defaults
 MATRIX_PRODUCER="/opt/projects/gemc/src/ci/distros_tags.sh"
-DEFAULT_OUTPUT="/opt/projects/gemc/home/_data/docker.yaml"
+DEFAULT_OUTPUT="/opt/projects/gemc/home/_data/docker.yml"
 DEFAULT_REGISTRY="ghcr.io/gemc/src"
 
 usage() {
