@@ -12,7 +12,7 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 #
 # sync artifacts to cvmfs from /work, can only be done in 240[12]
-42       */2  *  *  *     $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/sync_gemc_work_to_cvmfs.zsh
+42       */2  *  *  *   $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/sync_gemc_work_to_cvmfs.zsh
 
 
 

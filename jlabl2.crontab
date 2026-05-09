@@ -12,8 +12,8 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 # stage artifacts in /work - notice because of firewall this only can only be done on jlabl2
-2        *   * * *        $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_mauriplots_jlabl2.zsh
-11       */2 * * *      $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/stage_gemc_ci_artifacts_to_work.zsh
+2        *   * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/update_mauriplots_jlabl2.zsh
+11       */2 * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/stage_gemc_ci_artifacts_to_work.zsh
 4,24,44  *   * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
 
 
