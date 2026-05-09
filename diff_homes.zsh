@@ -33,7 +33,7 @@ compare_dirs() {
   done
 }
 
-compare_dirs /opt/projects/home/_includes     /opt/projects/gemc/home/_includes     --exclude=notes
+compare_dirs /opt/projects/home/_includes     /opt/projects/gemc/home/_includes     --exclude=notes --exclude=gemc-logo.svg
 compare_dirs /opt/projects/home/_layouts      /opt/projects/gemc/home/_layouts
 compare_dirs /opt/projects/home/assets        /opt/projects/gemc/home/assets        --exclude=images --exclude=quotes.txt --exclude=asciinema-rec_script
 
