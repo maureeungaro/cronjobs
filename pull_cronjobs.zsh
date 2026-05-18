@@ -6,9 +6,9 @@ user="$(whoami)"
 hmachine=$(hostname -s)
 
 case "$hmachine" in
-	enpungaro-m2)
+	enpungaro-m2n)
 		cron_location="/opt/projects/cronjobs"
-		cronfile="enpungaro-m2.crontab"
+		cronfile="enpungaro-m2n.crontab"
 		;;
 	ifarm2401)
 		cronfile="2401.crontab"
