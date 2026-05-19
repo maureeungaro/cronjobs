@@ -17,8 +17,7 @@ cj=/opt/projects/cronjobs
 6 * * * *  $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/update_gemc_home_docker_image_list.zsh
 8 * * * *  $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/update_g4install_readme.sh
 10 * * * * $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/update_ghome_milestone.sh
-
-
+12 * * * * $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/sync_code_instructions.zsh
 
 
 

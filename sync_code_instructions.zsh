@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+ilocation="$HOME/myenv/code"
+proj_location="/opt/projects"
+
+function remake_link() {
+	efile=$1
+	nlink=$2
+	rm -f $efile
+	ln -s $nlink $efile
+}
+
+typeset -A codes_inst=(
+	binder.md  "gemc/binder-tutorials"
+	gemc_clas12Tags.md "gemc/clas12Tags"
+	gemc_home.md "gemc/home"
+	gemc_src.md "gemc/src"
+	myhome.md "home"
+)
+
+
+# codex/claude main
+remake_link $HOME/.codex/AGENTS.md  $ilocation/global.md
+remake_link $HOME/.claude/CLAUDE.md $ilocation/global.md
+remake_link $HOME/.claude/settings.json $ilocation/claude_settings.json
+
+
+for this_instr dest_instr in ${(kv)codes_inst}; do
+	remake_link  "$proj_location/$dest_instr/AGENTS.md" "$ilocation/$this_instr"
+	remake_link  "$proj_location/$dest_instr/CLAUDE.md" "$ilocation/$this_instr"
+done
