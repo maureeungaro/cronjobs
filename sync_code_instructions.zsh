@@ -12,6 +12,7 @@ function remake_link() {
 
 typeset -A codes_inst=(
 	binder.md  "gemc/binder-tutorials"
+	g4install.md "gemc/g4install"
 	gemc_clas12Tags.md "gemc/clas12Tags"
 	gemc_home.md "gemc/home"
 	gemc_src.md "gemc/src"
