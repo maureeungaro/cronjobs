@@ -18,11 +18,12 @@ python3  $pymile \
   --milestone $milestone \
   --output-dir $out_dir
 
-# also update the documentation dynamically
-ghome=/opt/projects/gemc/home/
-cd $ghome
-export PATH=$PATH:/opt/projects/gemc/g4install/macosx26-clang21-arm64/gemc/dev/bin
+# also update the gemc documentation dynamically
+cd /opt/projects/gemc/home/
+local pgemc=/opt/jlab_software/macosx26-clang21-arm64/gemc/dev
+export PATH=$pgemc/bin:$pgemc/python_env/bin:$PATH
 python3 scripts/generate_options_docs.py
 
-# update bio
-  python3 bio/mauri/scripts/update_material.py --size 1000
+# also update the hom bio documentation dynamically
+cd /opt/projects/home/
+python3 bio/mauri/scripts/update_material.py --size 1000
