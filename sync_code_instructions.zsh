@@ -16,6 +16,7 @@ typeset -A codes_inst=(
 	gemc_clas12Tags.md "gemc/clas12Tags"
 	gemc_home.md "gemc/home"
 	gemc_src.md "gemc/src"
+	gemc_src.md "gemc/pygemc"
 	myhome.md "home"
 	simgrid.md "gemc/simGrid"
 )
