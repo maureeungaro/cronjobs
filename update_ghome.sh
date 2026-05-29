@@ -9,14 +9,17 @@ if [ "$#" -lt 1 ]; then
 fi
 
 milestone="$1"
+pygemc_milestone="$2"
+
 pymile=/opt/projects/gemc/home/scripts/fetch_github_milestone.py
 out_dir=/opt/projects/gemc/home/_data/github/
 
-python3  $pymile \
-  --owner gemc \
-  --repo src \
-  --milestone $milestone \
-  --output-dir $out_dir
+  python3 $pymile \
+    --owner gemc \
+    --repo src \
+    --milestone $milestone \
+    --repo-milestone pygemc:$pygemc_milestone \
+    --output-dir $out_dir
 
 # also update the gemc documentation dynamically
 cd /opt/projects/gemc/home/
@@ -27,3 +30,12 @@ python3 scripts/generate_options_docs.py
 # also update the hom bio documentation dynamically
 cd /opt/projects/home/
 python3 bio/mauri/scripts/update_material.py --size 1000
+
+
+# also update the release notes of src and pygemc
+rpynotes=/opt/projects/gemc/pygemc/ci/update_milestone_issues.py
+
+# project / milestone number / release version
+cd /opt/projects/gemc/
+python3 "$rpynotes" gemc/pygemc 1
+python3 "$rpynotes" gemc/src    2
