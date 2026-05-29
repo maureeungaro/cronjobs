@@ -13,6 +13,9 @@ pygemc_milestone="$2"
 
 pymile=/opt/projects/gemc/home/scripts/fetch_github_milestone.py
 out_dir=/opt/projects/gemc/home/_data/github/
+ghome=/opt/projects/gemc/home
+gsrc=/opt/projects/gemc/src
+gpygemc=/opt/projects/gemc/pygemc
 
   python3 $pymile \
     --owner gemc \
@@ -21,8 +24,15 @@ out_dir=/opt/projects/gemc/home/_data/github/
     --repo-milestone pygemc:$pygemc_milestone \
     --output-dir $out_dir
 
+# also update the rendered GEMC license page from the canonical repositories
+if ! cmp -s "$gsrc/LICENSE.md" "$gpygemc/LICENSE.md"; then
+  echo "ERROR: src/LICENSE.md and pygemc/LICENSE.md differ; update the homepage license manually." >&2
+  exit 1
+fi
+cp "$gsrc/LICENSE.md" "$ghome/license.md"
+
 # also update the gemc documentation dynamically
-cd /opt/projects/gemc/home/
+cd "$ghome"
 local pgemc=/opt/jlab_software/macosx26-clang21-arm64/gemc/dev
 export PATH=$pgemc/bin:$pgemc/python_env/bin:$PATH
 python3 scripts/generate_options_docs.py
