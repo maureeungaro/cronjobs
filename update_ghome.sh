@@ -8,20 +8,24 @@ if [ "$#" -lt 1 ]; then
 	exit 2
 fi
 
-milestone="$1"
+src_milestone="$1"
 pygemc_milestone="$2"
+c12s_milestone=$3
 
 pymile=/opt/projects/gemc/home/scripts/fetch_github_milestone.py
 out_dir=/opt/projects/gemc/home/_data/github/
 ghome=/opt/projects/gemc/home
+
 gsrc=/opt/projects/gemc/src
 gpygemc=/opt/projects/gemc/pygemc
+c12s=/opt/projects/gemc/clas12-systems
 
   python3 $pymile \
     --owner gemc \
     --repo src \
-    --milestone $milestone \
+    --milestone $src_milestone \
     --repo-milestone pygemc:$pygemc_milestone \
+    --repo-milestone clas12-systems:$c12s_milestone \
     --output-dir $out_dir
 
 # also update the rendered GEMC license page from the canonical repositories
