@@ -25,7 +25,8 @@ local pgemc=/opt/jlab_software/macosx26-clang21-arm64/gemc/dev
 export PATH=$pgemc/bin:$pgemc/python_env/bin:$PATH
 python3 scripts/generate_options_docs.py
 source ~/venv/yaml/bin/activate
-python3 scripts/generate_example_assets.py
+
+#python3 scripts/generate_example_assets.py
 python3 scripts/fetch_github_milestone.py \
 	--owner gemc \
 	--repo src \
