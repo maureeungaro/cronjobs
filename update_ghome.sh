@@ -1,7 +1,6 @@
 #!/bin/zsh
 set -euo pipefail
 
-
 # Require at least one argument: the directory where the json is written
 if [ "$#" -lt 1 ]; then
 	echo "Usage: $0 milestone number" >&2
@@ -15,9 +14,6 @@ c12s_milestone=$3
 out_dir=/opt/projects/gemc/home/_data/github/
 ghome=/opt/projects/gemc/home
 
-gsrc=/opt/projects/gemc/src
-gpygemc=/opt/projects/gemc/pygemc
-c12s=/opt/projects/gemc/clas12-systems
 
 # gemc documentation dynamically
 cd "$ghome"
@@ -40,9 +36,13 @@ cd /opt/projects/home/
 python3 bio/mauri/scripts/update_material.py --size 1000
 
 
-# project / milestone number / release version
-rpynotes=pygemc/ci/update_milestone_issues.py
+# update
 
-cd /opt/projects/gemc/
-python3 "$rpynotes" gemc/pygemc 1
-python3 "$rpynotes" gemc/src    2
+update_issues=/opt/projects/cronjobs/update_issues.py
+
+# Run from each repo checkout so update_issues.py auto-detects that repo and
+# updates the latest versioned file in its releases/ directory (never dev.md).
+cd /opt/projects/gemc/src            && python3 "$update_issues" gemc/src            "$src_milestone"
+cd /opt/projects/gemc/pygemc         && python3 "$update_issues" gemc/pygemc         "$pygemc_milestone"
+cd /opt/projects/gemc/clas12-systems && python3 "$update_issues" gemc/clas12-systems "$c12s_milestone"
+
