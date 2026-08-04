@@ -20,6 +20,7 @@ typeset -A codes_inst=(
 	clas12-systems.md "gemc/clas12-systems"
 	myhome.md "home"
 	simgrid.md "gemc/simGrid"
+	casetta.md "casetta"
 )
 
 
