@@ -27,9 +27,10 @@ python3 scripts/fetch_github_milestone.py \
 	--owner gemc \
 	--repo src \
 	--milestone $src_milestone \
-	--repo-milestone pygemc:$pygemc_milestone \
 	--repo-milestone clas12-systems:$c12s_milestone \
 	--output-dir $out_dir
+
+#	--repo-milestone pygemc:$pygemc_milestone \
 
 # also update the home bio documentation dynamically
 cd /opt/projects/home/
