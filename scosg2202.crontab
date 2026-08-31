@@ -19,7 +19,7 @@ MAILTO=ungaro@jlab.org
 # 4-59/6: starts at minute 4, then every 6 minutes up to minute 59
 1-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $d/token-renew
 2-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sgd/osg_submit.py --devel
-3-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sgd/osg_submit.py
+3-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/osg_submit.py
 4-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/condor_io/list_owner_submission.py  -q -c msql_conn.txt --store-db
 5-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sgd/condor_io/list_owner_submission.py -q -c msql_conn.txt --store-db -dev
 6-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l /home/gemc/logs $sg/update_simgrid.sh
