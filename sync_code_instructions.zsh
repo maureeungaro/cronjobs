@@ -21,6 +21,7 @@ typeset -A codes_inst=(
 	myhome.md "home"
 	simgrid.md "gemc/simGrid"
 	casetta.md "casetta"
+	threadscaling.md "gemc/ThreadScale"
 )
 
 
