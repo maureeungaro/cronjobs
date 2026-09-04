@@ -22,6 +22,7 @@ typeset -A codes_inst=(
 	simgrid.md "gemc/simGrid"
 	casetta.md "casetta"
 	threadscaling.md "gemc/ThreadScale"
+	tech_note.md "pubs/notes/clas12_notes"
 )
 
 
