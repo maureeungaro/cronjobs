@@ -21,6 +21,7 @@ case "$hmachine" in
 		cronfile="jlabl2.crontab"
 		;;
 	gemc-rh9)
+		myemv_location="na"
 		case "$user" in
 			ungaro)
 				cronfile="gemc.ungaro.crontab"
@@ -44,11 +45,14 @@ cd   $cron_location
 git  pull
 cd
 
-echo
-echo Pulling $myemv_location
-cd   $myemv_location
-git pull
-cd
+if [[ $myemv_location != "na" ]]; then
+	echo
+	echo Pulling $myemv_location
+	cd   $myemv_location
+	git pull
+	cd
+fi
+
 
 echo Crontabbing: "$cron_location/$cronfile"
 /usr/bin/crontab "$cron_location/$cronfile"
