@@ -2,6 +2,7 @@
 set -euo pipefail
 
 cron_location="$HOME/cronjobs"
+myemv_location="$HOME/myenv"
 user="$(whoami)"
 hmachine=$(hostname -s)
 
@@ -41,6 +42,12 @@ echo
 echo Pulling $cron_location
 cd   $cron_location
 git  pull
+cd
+
+echo
+echo Pulling $myemv_location
+cd   $myemv_location
+git pull
 cd
 
 echo Crontabbing: "$cron_location/$cronfile"
