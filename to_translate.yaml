@@ -1,0 +1,67 @@
+# Translation plan for the shared tool (~/myenv/bin/translate/translate.py), run by
+# update_translations.zsh (manually or via the daily cron). English is the source of truth;
+# supported languages live in ~/myenv/bin/translate/languages.yaml.
+#
+# Staged rollout: `files` is the set currently enabled for translation — start with the top-level
+# pages and GROW this list over time. `candidates` is only used for the "files enabled X/Y" coverage
+# report (never translated), so you can see how close a site is to fully translated.
+#
+# Progress ("what has been translated so far") is recorded in the state file below, keyed by
+# repo -> file -> language with the source hash + timestamp. A file is re-translated only when its
+# English content changes.
+
+# Machine-written progress tracker (next to this file). Do not hand-edit.
+state_file: translation_state.json
+
+# Optional: a glossary that overrides the tool's base glossary for every repo here. Omit to use
+# ~/myenv/bin/translate/glossary.yml. A single repo can also set its own `glossary:`.
+# glossary: /opt/projects/cronjobs/glossary.yml
+
+repos:
+  # --- jekyll-polyglot sites: translations written to i18n/<lang>/<path> ---------------------------
+  - name: gemc/home
+    path: /opt/projects/gemc/home
+    layout: polyglot
+    files:                       # top-level pages first (license.md kept English on purpose)
+      - index.markdown
+      - b_installation.markdown
+      - c_examples.markdown
+      - d_documentation.markdown
+      - n_news.markdown
+    candidates:                  # coverage denominator (the eventual full set)
+      - "*.markdown"
+      - "_documentation/**/*.md"
+      - "_examples/**/*.md"
+
+  - name: home
+    path: /opt/projects/home
+    layout: polyglot             # requires jekyll-polyglot installed on this site
+    files:                       # top-level content pages first; add more over time
+      - index.markdown
+      - p_profile.markdown
+      - p_publications.markdown
+      - p_showcase.markdown
+      - e_projects.markdown
+      - r_notes.markdown
+    candidates:
+      - "*.markdown"
+      - "_posts/**/*.md"
+
+  # --- plain READMEs: translations written as README.<lang>.md siblings + a language-nav block -----
+  - name: gemc/src
+    path: /opt/projects/gemc/src
+    layout: sibling
+    files:
+      - README.md
+
+  - name: gemc/pygemc
+    path: /opt/projects/gemc/pygemc
+    layout: sibling
+    files:
+      - README.md
+
+  - name: gemc/clas12-systems
+    path: /opt/projects/gemc/clas12-systems
+    layout: sibling
+    files:
+      - README.md
