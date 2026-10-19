@@ -22,6 +22,7 @@ repos:
   - name: gemc/home
     path: /opt/projects/gemc/home
     layout: polyglot
+    translate_fields: [title]    # localize the page title too (drives the top-nav labels)
     files:                       # top-level pages first (license.md kept English on purpose)
       - index.markdown
       - b_installation.markdown
@@ -36,6 +37,7 @@ repos:
   - name: home
     path: /opt/projects/home
     layout: polyglot             # requires jekyll-polyglot installed on this site
+    translate_fields: [title]    # localize the page title too (drives the top-nav labels)
     files:                       # top-level content pages first; add more over time
       - index.markdown
       - p_profile.markdown
@@ -43,6 +45,8 @@ repos:
       - p_showcase.markdown
       - e_projects.markdown
       - r_notes.markdown
+      - weekly.markdown
+      - y_directory.markdown
     candidates:
       - "*.markdown"
       - "_posts/**/*.md"
@@ -65,3 +69,107 @@ repos:
     layout: sibling
     files:
       - README.md
+
+  # --- runtime message catalogs: English keys stay fixed, only values are translated ------------
+  - name: gemc/src-messages
+    path: /opt/projects/gemc/src
+    layout: catalog
+    file: translations/en.yaml
+    extractor: ci/extract_messages.py
+    batch_size: 48
+
+  - name: gemc/clas12-messages
+    path: /opt/projects/gemc/clas12-systems
+    layout: catalog
+    file: translations/en.yaml
+    extractor: ../src/ci/extract_messages.py
+    batch_size: 48
+
+  # --- Qt GUI: context-aware TS catalogs, with the same resumable agent review/state ------------
+  - name: gemc/src-gui
+    path: /opt/projects/gemc/src
+    layout: qt-catalog
+    file: translations/gui/en.ts
+    extractor: ci/qt_catalogs.py
+    batch_size: 48
+
+  # --- collection documents (jekyll-polyglot): the English doc has no explicit permalink (its URL comes
+  #     from the collection), so set `permalink` to match the built URL. The tool writes each translation as
+  #     a lang-suffixed sibling inside the collection dir (e.g. _mynotes/<name>.fr.md), which polyglot
+  #     coordinates with the English doc. `:name` = file stem; `:path` = sub-path for nested collections. ---
+  - name: home-notes
+    path: /opt/projects/home
+    layout: polyglot
+    permalink: "/mynotes/:name.html"
+    files:
+      - _mynotes/apache.md
+      - _mynotes/asciinema.md
+      - _mynotes/cpp_sanitizers.md
+      - _mynotes/cvmfs.md
+      - _mynotes/debugging_c++.md
+      - _mynotes/docker.md
+      - _mynotes/git.md
+      - _mynotes/github_marketplace.md
+      - _mynotes/htcondor.md
+      - _mynotes/jekyll.md
+      - _mynotes/jupyter.md
+      - _mynotes/macos.md
+      - _mynotes/paw_cernlib_macos.md
+      - _mynotes/profiling_c++.md
+      - _mynotes/python.md
+      - _mynotes/rsync.md
+      - _mynotes/static_assertions.md
+      - _mynotes/vac_checklist.md
+      - _mynotes/venice.md
+    candidates:
+      - "_mynotes/*.md"
+
+  # Example documentation pages (nested _examples collection). URL is /examples/<sub-path>.html, so the
+  # permalink uses :path (e.g. basic/b2). The gallery landing page (/examples/) is data-driven from
+  # _data/examples.yml and is handled separately — see the note at the end of this file.
+  - name: gemc/home-examples
+    path: /opt/projects/gemc/home
+    layout: polyglot
+    permalink: "/examples/:path.html"
+    files:
+      - _examples/basic/b1.md
+      - _examples/basic/b2.md
+      - _examples/basic/boolean_solids.md
+      - _examples/basic/cad.md
+      - _examples/basic/generator_manipulations.md
+      - _examples/basic/materials.md
+      - _examples/basic/pyvista.md
+      - _examples/basic/scintillator_barrel.md
+      - _examples/basic/simple_flux.md
+      - _examples/clas12/dc.md
+      - _examples/clas12/ec.md
+      - _examples/clas12/ft.md
+      - _examples/clas12/ftof.md
+      - _examples/clas12/htcc.md
+      - _examples/clas12/ltcc.md
+      - _examples/clas12/pcal.md
+      - _examples/fields/constant.md
+      - _examples/fields/dipole.md
+      - _examples/fields/solenoid.md
+      - _examples/fields/torus.md
+      - _examples/optical/cherenkov.md
+      - _examples/optical/mirrors.md
+      - _examples/optical/parabolic_mirror.md
+    candidates:
+      - "_examples/**/*.md"
+
+  # --- data files: translate only the listed `fields`; everything else (links, badges, flags) is copied
+  #     verbatim. The tool writes _data/<lang>/<file>, which jekyll-polyglot merges over site.data for each
+  #     language. This localizes the Examples gallery landing page (card titles/descriptions/categories from
+  #     _data/examples.yml, and the gallery intro from _data/ui_strings.yml). ----------------------------
+  - name: gemc/home-examples-data
+    path: /opt/projects/gemc/home
+    layout: data
+    file: _data/examples.yml
+    fields: [title, header, category]
+
+  - name: gemc/home-ui-strings
+    path: /opt/projects/gemc/home
+    layout: data
+    file: _data/ui_strings.yml
+    fields: [examples_intro, search_placeholder, search_aria_label, search_no_results]
