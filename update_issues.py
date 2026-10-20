@@ -149,7 +149,7 @@ def read_json(url: str, token: str | None) -> list[dict]:
 			return json.loads(response.read().decode("utf-8"))
 	except HTTPError as exc:
 		message = exc.read().decode("utf-8", errors="replace")
-		raise SystemExit(f"GitHub API error {exc.code}: {message}") from exc
+		raise SystemExit(f"GitHub API error {exc.code} for {url}: {message}") from exc
 	except URLError as exc:
 		raise SystemExit(f"Could not reach GitHub API: {exc.reason}") from exc
 

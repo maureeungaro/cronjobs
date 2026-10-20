@@ -1,15 +1,26 @@
 #!/bin/zsh
 set -euo pipefail
 
-# Require at least one argument: the directory where the json is written
-if [ "$#" -lt 1 ]; then
-	echo "Usage: $0 milestone number" >&2
+# Milestone numbers are repository-specific; '-' disables pygemc updates.
+if [ "$#" -ne 3 ]; then
+	echo "Usage: $0 src_milestone pygemc_milestone_or_- clas12_systems_milestone" >&2
 	exit 2
 fi
 
 src_milestone="$1"
 pygemc_milestone="$2"
-c12s_milestone=$3
+c12s_milestone="$3"
+
+if [[ "$src_milestone" != <1-> || "$c12s_milestone" != <1-> ||
+	( "$pygemc_milestone" != "-" && "$pygemc_milestone" != <1-> ) ]]; then
+	echo "Milestones must be positive integers; use '-' to skip pygemc." >&2
+	exit 2
+fi
+
+pygemc_args=()
+if [[ "$pygemc_milestone" != "-" ]]; then
+	pygemc_args=(--repo-milestone "pygemc:$pygemc_milestone")
+fi
 
 out_dir=/opt/projects/gemc/home/_data/github/
 ghome=/opt/projects/gemc/home
@@ -26,11 +37,10 @@ source ~/venv/yaml/bin/activate
 python3 scripts/fetch_github_milestone.py \
 	--owner gemc \
 	--repo src \
-	--milestone $src_milestone \
-	--repo-milestone clas12-systems:$c12s_milestone \
-	--output-dir $out_dir
-
-#	--repo-milestone pygemc:$pygemc_milestone \
+	--milestone "$src_milestone" \
+	"${pygemc_args[@]}" \
+	--repo-milestone "clas12-systems:$c12s_milestone" \
+	--output-dir "$out_dir"
 
 # also update the home bio documentation dynamically
 cd /opt/projects/home/
@@ -44,6 +54,10 @@ update_issues=/opt/projects/cronjobs/update_issues.py
 # Run from each repo checkout so update_issues.py auto-detects that repo and
 # updates the latest versioned file in its releases/ directory (never dev.md).
 cd /opt/projects/gemc/src            && python3 "$update_issues" gemc/src            "$src_milestone"
-cd /opt/projects/gemc/pygemc         && python3 "$update_issues" gemc/pygemc         "$pygemc_milestone"
+if [[ "$pygemc_milestone" != "-" ]]; then
+	cd /opt/projects/gemc/pygemc && python3 "$update_issues" gemc/pygemc "$pygemc_milestone"
+else
+	echo "Skipping gemc/pygemc: no milestone configured."
+fi
 cd /opt/projects/gemc/clas12-systems && python3 "$update_issues" gemc/clas12-systems "$c12s_milestone"
 

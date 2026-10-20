@@ -92,24 +92,24 @@
     },
     "b_installation.markdown": {
       "it": {
-        "src_sha256": "faf6f23601522171b4f83197255f7d34d14f9be534e75fb118c240481ce435dc",
-        "updated": "2026-10-14T13:37:07",
-        "tag": "1cacb76"
+        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
+        "updated": "2026-10-19T16:21:34",
+        "tag": "048227a"
       },
       "ja": {
-        "src_sha256": "faf6f23601522171b4f83197255f7d34d14f9be534e75fb118c240481ce435dc",
-        "updated": "2026-10-14T13:42:27",
-        "tag": "1cacb76"
+        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
+        "updated": "2026-10-20T00:34:29",
+        "tag": "048227a"
       },
       "fr": {
-        "src_sha256": "faf6f23601522171b4f83197255f7d34d14f9be534e75fb118c240481ce435dc",
-        "updated": "2026-10-14T13:47:30",
-        "tag": "1cacb76"
+        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
+        "updated": "2026-10-20T09:31:52",
+        "tag": "048227a"
       },
       "zh": {
-        "src_sha256": "faf6f23601522171b4f83197255f7d34d14f9be534e75fb118c240481ce435dc",
-        "updated": "2026-10-14T13:52:32",
-        "tag": "1cacb76"
+        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
+        "updated": "2026-10-20T09:36:14",
+        "tag": "048227a"
       }
     },
     "c_examples.markdown": {
@@ -310,6 +310,50 @@
         "src_sha256": "a38eed32d2a14fc2a513a605b04e4161eb7a357a1f8e7f989dc1431c151402b2",
         "updated": "2026-10-13T18:40:18",
         "tag": "6c08880"
+      }
+    },
+    "weekly.markdown": {
+      "it": {
+        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
+        "updated": "2026-10-20T00:42:06",
+        "tag": "1a1aa57"
+      },
+      "ja": {
+        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
+        "updated": "2026-10-20T00:48:19",
+        "tag": "1a1aa57"
+      },
+      "fr": {
+        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
+        "updated": "2026-10-20T00:48:46",
+        "tag": "1a1aa57"
+      },
+      "zh": {
+        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
+        "updated": "2026-10-20T00:52:51",
+        "tag": "1a1aa57"
+      }
+    },
+    "y_directory.markdown": {
+      "it": {
+        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
+        "updated": "2026-10-20T00:53:08",
+        "tag": "1a1aa57"
+      },
+      "ja": {
+        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
+        "updated": "2026-10-20T01:01:36",
+        "tag": "1a1aa57"
+      },
+      "fr": {
+        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
+        "updated": "2026-10-20T01:01:53",
+        "tag": "1a1aa57"
+      },
+      "zh": {
+        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
+        "updated": "2026-10-20T01:02:10",
+        "tag": "1a1aa57"
       }
     }
   },
