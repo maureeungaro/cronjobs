@@ -39,18 +39,23 @@ case "$hmachine" in
 		;;
 esac
 
-echo
-echo Pulling $cron_location
-cd   $cron_location
-git  pull
-cd
+# Pull a repo without letting a dirty tree or a pull failure abort the script.
+# --autostash stashes local changes, rebases, then re-applies them, so
+# uncommitted work no longer blocks the pull. On any failure we warn and
+# continue so the crontab install below always runs.
+safe_pull() {
+	local dir="$1"
+	echo
+	echo "Pulling $dir"
+	if ! git -C "$dir" pull --rebase --autostash; then
+		echo "WARNING: git pull failed in $dir; continuing" >&2
+	fi
+}
+
+safe_pull "$cron_location"
 
 if [[ $myemv_location != "na" ]]; then
-	echo
-	echo Pulling $myemv_location
-	cd   $myemv_location
-	git pull
-	cd
+	safe_pull "$myemv_location"
 fi
 
 
