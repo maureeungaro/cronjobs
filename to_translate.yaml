@@ -40,10 +40,8 @@ repos:
     translate_fields: [title]    # localize the page title too (drives the top-nav labels)
     files:                       # top-level content pages first; add more over time
       - index.markdown
-      - p_profile.markdown
       - p_publications.markdown
       - p_showcase.markdown
-      - e_projects.markdown
       - r_notes.markdown
       - weekly.markdown
       - y_directory.markdown
