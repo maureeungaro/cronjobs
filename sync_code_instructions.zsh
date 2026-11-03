@@ -36,3 +36,7 @@ for this_instr dest_instr in ${(kv)codes_inst}; do
 	remake_link  "$proj_location/$dest_instr/AGENTS.md" "$ilocation/$this_instr"
 	remake_link  "$proj_location/$dest_instr/CLAUDE.md" "$ilocation/$this_instr"
 done
+
+
+# also sync run_with_lock_and_log.zsh to simgrid
+cp /opt/projects/cronjobs/run_with_lock_and_log.zsh /opt/projects/gemc/simGrid

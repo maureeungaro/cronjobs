@@ -23,20 +23,16 @@ while getopts ":l:" opt; do
 done
 shift $((OPTIND - 1))
 
-# cronjob sends an email whenever there is stdout or stderr
-# in this script:
-# - usage error in the wrapper: emailed
-# - missing or non-executable target script: emailed
-# - cannot create log dir or temp file: emailed
-# - wrapped script returns nonzero: emailed
-#   for diff jobs, rc=1 means differences were found
-# - wrapped script succeeds: no email
-# - lock busy (flock -n returns 75 because of -E 75): no email, only log entry
+# Logging and exit behavior:
+# - wrapper errors and target failures return nonzero
+# - target success returns 0
+# - lock contention returns 0 and is logged as skipped
+# - target stdout and stderr are saved in timestamped logs
+# - logs older than cleanup_days days are removed
 #
-# Additional behavior:
-# - log files are timestamped
-# - wrapped script stderr is written to the log file
-# - log files older than 2 weeks are removed automatically
+# Traditional cron emails command output.
+# Slurm notifications depend on --mail-user and --mail-type.
+# Exit code 75 is reserved for lock contention.
 
 cleanup() {
 	[ -n "${outfile:-}" ] && [ -f "$outfile" ] && rm -f "$outfile"
@@ -137,7 +133,7 @@ append_stderr_to_log() {
 # captures wrapped-script stdout and stderr separately
 # later appends stdout/stderr to the log
 # still captures stderr separately
-# makes lock-busy return 75 instead of ambiguous 1
+# rc=75 from flock -n -E 75 means lock busy.
 flock -n -E 75 "$lockfile" "$script" "$@" >"$outfile" 2>"$errfile"
 rc=$?
 
@@ -172,8 +168,10 @@ if [ "$rc" -eq 75 ]; then
 	exit 0
 fi
 
-# Any other nonzero rc means the wrapped command returned nonzero.
-# For diff jobs, rc=1 usually means differences were found.
+
+# Any other nonzero rc is treated as a real failure.
+# Save details to the timestamped log and stderr.
+# Returning nonzero allows Slurm to detect the failure.
 {
 	echo "===== wrapped script returned nonzero ====="
 	echo "date:       $(date)"
