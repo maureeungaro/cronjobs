@@ -12,4 +12,4 @@ logs=/global/homes/m/mungaro/logs
 #
 # Update the simGrid checkout
 #SCRON -q cron -C cron -A m5464 -t 00:05:00 -J simgrid-update -o /global/homes/m/mungaro/logs/simgrid-update-%j.out --open-mode=append --mail-user=ungaro@jlab.org --mail-type=FAIL
-6-59/10 * * * * /global/homes/m/mungaro/software/simgrid/main/run_with_lock_and_log.zsh -l /global/homes/m/mungaro/logs /global/homes/m/mungaro/software/simgrid/main/update_simgrid.sh
+6-59/10 * * * * /global/homes/m/mungaro/software/simgrid/main/run_with_lock_and_log.zsh -l /global/homes/m/mungaro/logs /global/homes/m/mungaro/software/simgrid/main/update_software.sh
