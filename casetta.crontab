@@ -12,8 +12,10 @@ MAILTO=ungaro@jlab.org
 # *  *  *  *  * command to be executed
 
 cj=/opt/projects/cronjobs
-4 * * * *  $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/pull_cronjobs.zsh
-12 * * * * $cj/run_with_lock_and_log.zsh -l $cj/logs $cj/sync_code_instructions.zsh
+rll=/opt/projects/cronjobs/run_with_lock_and_log.zsh
+logs=/opt/projects/cronjobs/logs
+4  * * * *  $rll -l $logs $cj/pull_cronjobs.zsh
+12 * * * *  $rll -l $logs $cj/sync_code_instructions.zsh
 
 
 

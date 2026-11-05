@@ -11,6 +11,8 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 #
-4,24,44 * * * *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
+cj=/home/ungaro/cronjobs
+rll=/home/ungaro/cronjobs/run_with_lock_and_log.zsh
+4,24,44 * * * *  $rll $cj/pull_cronjobs.zsh
 
 

@@ -4,6 +4,7 @@ d=/home/gemc/sw/utilities/osg/bin
 sg=/home/gemc/software/simgrid/main
 sgd=/home/gemc/software/simgrid/dev
 logs=/home/gemc/logs
+rll=/home/gemc/software/simgrid/main/run_with_lock_and_log.zsh
 #
 # .---------------- minute (0 - 59)
 # |  .------------- hour (0 - 23)
@@ -17,15 +18,15 @@ logs=/home/gemc/logs
 # Submit jobs, log the OSG usage and prioritize them:
 MAILTO=ungaro@jlab.org
 # 4-59/6: starts at minute 4, then every 6 minutes up to minute 59
-1-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $d/token-renew
-2-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sgd/osg_submit.py --devel
-3-59/6  *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sg/osg_submit.py
-4-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sg/condor_io/list_owner_submission.py  -q -c msql_conn.txt --store-db --timeline-file  $HOME/timeline.json
-5-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sgd/condor_io/list_owner_submission.py -q -c msql_conn.txt --store-db --timeline-file  $HOME/timeline.json -dev
-6-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sg/update_simgrid.sh
-7-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sg/condor_io/run_priority_map.py -p -a -m 20
-8-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sg/db_io/mark_completed_submissions.py --write-to-db
-9-59/10 *  *  *  *  $sg/run_with_lock_and_log.zsh -l $logs $sgd/db_io/mark_completed_submissions.py --write-to-db --database=CLAS12TEST
+1-59/6  *  *  *  *  $rll -l $logs $d/token-renew
+2-59/6  *  *  *  *  $rll -l $logs $sgd/osg_submit.py --devel
+3-59/6  *  *  *  *  $rll -l $logs $sg/osg_submit.py
+4-59/10 *  *  *  *  $rll -l $logs $sg/condor_io/list_owner_submission.py  -q -c msql_conn.txt --store-db --timeline-file  $HOME/timeline.json
+5-59/10 *  *  *  *  $rll -l $logs $sgd/condor_io/list_owner_submission.py -q -c msql_conn.txt --store-db --timeline-file  $HOME/timeline.json -dev
+6-59/10 *  *  *  *  $rll -l $logs $sg/update_simgrid.sh
+7-59/10 *  *  *  *  $rll -l $logs $sg/condor_io/run_priority_map.py -p -a -m 20
+8-59/10 *  *  *  *  $rll -l $logs $sg/db_io/mark_completed_submissions.py --write-to-db
+9-59/10 *  *  *  *  $rll -l $logs $sgd/db_io/mark_completed_submissions.py --write-to-db --database=CLAS12TEST
 #
 #
 MAILTO=baltzell@jlab.org

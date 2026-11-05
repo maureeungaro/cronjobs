@@ -11,5 +11,7 @@ MAILTO=ungaro@jlab.org
 # |  |  |  |  |
 # *  *  *  *  * command to be executed
 #
-2-59/10 *  *  *  *  $HOME/cronjobs/run_with_lock_and_log.zsh $HOME/cronjobs/pull_cronjobs.zsh
-2-59/10 *  *  *  *  $HOME/cronjobs/run_with_lock_and_log.zsh cd $HOME/simGrid && git pull
+cj=/home/ungaro/cronjobs
+rll=/home/ungaro/cronjobs/run_with_lock_and_log.zsh
+2-59/10 *  *  *  *  $rll $cj/pull_cronjobs.zsh
+3-59/10 *  *  *  *  git -C $HOME/simGrid pull --rebase --autostash
