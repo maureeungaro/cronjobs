@@ -24,7 +24,7 @@ MAILTO=ungaro@jlab.org
 4-59/10 *  *  *  *  $rll -l $logs $sg/condor_io/list_owner_submission.py  -q -c msql_conn.txt --store-db --timeline-file  $HOME/timeline.json
 5-59/10 *  *  *  *  $rll -l $logs $sgd/condor_io/list_owner_submission.py -q -c msql_conn.txt --store-db --timeline-file  $HOME/timeline.json -dev
 6-59/10 *  *  *  *  $rll -l $logs $sg/update_simgrid.sh
-7-59/10 *  *  *  *  $rll -l $logs $sg/condor_io/run_priority_map.py -p -a -m 20
+7-59/10 *  *  *  *  $rll -l $logs $sg/condor_io/run_priority_map.py -p -a -m 30
 8-59/10 *  *  *  *  $rll -l $logs $sg/db_io/mark_completed_submissions.py --write-to-db
 9-59/10 *  *  *  *  $rll -l $logs $sgd/db_io/mark_completed_submissions.py --write-to-db --database=CLAS12TEST
 #
