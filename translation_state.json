@@ -2,114 +2,118 @@
   "gemc/src": {
     "README.md": {
       "it": {
-        "src_sha256": "195c8c9548c0b00969e88e97f1e94ecb8a2df22315906939e31ca5effc2f8248",
-        "updated": "2026-10-21T14:27:57",
-        "tag": "0.5-8-gce78af1"
+        "src_sha256": "db0847045feec726e9b363df007c0231224574fab91d0b66bef6b403a604aa56",
+        "updated": "2026-11-19T10:44:26",
+        "tag": "0.5-28-g4b109e13"
       },
       "ja": {
-        "src_sha256": "195c8c9548c0b00969e88e97f1e94ecb8a2df22315906939e31ca5effc2f8248",
-        "updated": "2026-10-21T14:30:55",
-        "tag": "0.5-8-gce78af1"
+        "src_sha256": "db0847045feec726e9b363df007c0231224574fab91d0b66bef6b403a604aa56",
+        "updated": "2026-11-19T10:47:57",
+        "tag": "0.5-28-g4b109e13"
       },
       "fr": {
-        "src_sha256": "195c8c9548c0b00969e88e97f1e94ecb8a2df22315906939e31ca5effc2f8248",
-        "updated": "2026-10-21T14:33:45",
-        "tag": "0.5-8-gce78af1"
+        "src_sha256": "db0847045feec726e9b363df007c0231224574fab91d0b66bef6b403a604aa56",
+        "updated": "2026-11-19T10:51:08",
+        "tag": "0.5-28-g4b109e13"
       },
       "zh": {
-        "src_sha256": "195c8c9548c0b00969e88e97f1e94ecb8a2df22315906939e31ca5effc2f8248",
-        "updated": "2026-10-21T14:36:15",
-        "tag": "0.5-8-gce78af1"
+        "src_sha256": "db0847045feec726e9b363df007c0231224574fab91d0b66bef6b403a604aa56",
+        "updated": "2026-11-19T10:54:15",
+        "tag": "0.5-28-g4b109e13"
       }
     }
   },
   "gemc/pygemc": {
     "README.md": {
       "it": {
-        "src_sha256": "0283180ac3917dc9e69d662ccc3777a39a7f485b57c33f5c890ef1258500ed09",
-        "updated": "2026-10-10T05:59:33"
+        "src_sha256": "690d86192a19c0e5f72a4267fdd2795b881990c1de554cfbf6c1c92fe8981fe6",
+        "updated": "2026-11-19T10:57:42",
+        "tag": "v0.5.0-5-g15b7d9a"
       },
       "ja": {
-        "src_sha256": "0283180ac3917dc9e69d662ccc3777a39a7f485b57c33f5c890ef1258500ed09",
-        "updated": "2026-10-10T06:02:34"
+        "src_sha256": "690d86192a19c0e5f72a4267fdd2795b881990c1de554cfbf6c1c92fe8981fe6",
+        "updated": "2026-11-19T11:01:29",
+        "tag": "v0.5.0-5-g15b7d9a"
       },
       "fr": {
-        "src_sha256": "0283180ac3917dc9e69d662ccc3777a39a7f485b57c33f5c890ef1258500ed09",
-        "updated": "2026-10-10T06:05:31"
+        "src_sha256": "690d86192a19c0e5f72a4267fdd2795b881990c1de554cfbf6c1c92fe8981fe6",
+        "updated": "2026-11-19T11:04:53",
+        "tag": "v0.5.0-5-g15b7d9a"
       },
       "zh": {
-        "src_sha256": "0283180ac3917dc9e69d662ccc3777a39a7f485b57c33f5c890ef1258500ed09",
-        "updated": "2026-10-10T06:08:25"
+        "src_sha256": "690d86192a19c0e5f72a4267fdd2795b881990c1de554cfbf6c1c92fe8981fe6",
+        "updated": "2026-11-19T11:08:13",
+        "tag": "v0.5.0-5-g15b7d9a"
       }
     }
   },
   "gemc/clas12-systems": {
     "README.md": {
       "it": {
-        "src_sha256": "2d27fde62fa47dd7ca433379a5337a90478e8837fa0ff3da34b3194468399145",
-        "updated": "2026-10-21T14:41:40",
-        "tag": "0.3-3-g2c5d033"
+        "src_sha256": "438a6ad9f9725fda4edfa04675ee2df72cc5cc115c1e55ff546b201ebc37c928",
+        "updated": "2026-11-19T11:15:07",
+        "tag": "0.3-9-g03edd6b"
       },
       "ja": {
-        "src_sha256": "2d27fde62fa47dd7ca433379a5337a90478e8837fa0ff3da34b3194468399145",
-        "updated": "2026-10-21T14:46:41",
-        "tag": "0.3-3-g2c5d033"
+        "src_sha256": "438a6ad9f9725fda4edfa04675ee2df72cc5cc115c1e55ff546b201ebc37c928",
+        "updated": "2026-11-19T14:02:30",
+        "tag": "0.3-9-g03edd6b"
       },
       "fr": {
-        "src_sha256": "2d27fde62fa47dd7ca433379a5337a90478e8837fa0ff3da34b3194468399145",
-        "updated": "2026-10-21T14:52:15",
-        "tag": "0.3-3-g2c5d033"
+        "src_sha256": "438a6ad9f9725fda4edfa04675ee2df72cc5cc115c1e55ff546b201ebc37c928",
+        "updated": "2026-11-19T14:09:18",
+        "tag": "0.3-9-g03edd6b"
       },
       "zh": {
-        "src_sha256": "2d27fde62fa47dd7ca433379a5337a90478e8837fa0ff3da34b3194468399145",
-        "updated": "2026-10-21T14:57:42",
-        "tag": "0.3-3-g2c5d033"
+        "src_sha256": "438a6ad9f9725fda4edfa04675ee2df72cc5cc115c1e55ff546b201ebc37c928",
+        "updated": "2026-11-19T14:15:53",
+        "tag": "0.3-9-g03edd6b"
       }
     }
   },
   "gemc/home": {
     "index.markdown": {
       "it": {
-        "src_sha256": "4cf191dc8aa099fb37c7c5039086e5fbf673bb4c44c1816d54906431c6e9faa0",
-        "updated": "2026-10-21T14:09:36",
-        "tag": "18c02f5"
+        "src_sha256": "9af062ee8fa09b3ab2c79f00a1d153025d79f554063df8dd671472a6ab777770",
+        "updated": "2026-11-19T09:52:54",
+        "tag": "ab96d2f"
       },
       "ja": {
-        "src_sha256": "4cf191dc8aa099fb37c7c5039086e5fbf673bb4c44c1816d54906431c6e9faa0",
-        "updated": "2026-10-21T14:11:58",
-        "tag": "18c02f5"
+        "src_sha256": "9af062ee8fa09b3ab2c79f00a1d153025d79f554063df8dd671472a6ab777770",
+        "updated": "2026-11-19T09:55:31",
+        "tag": "ab96d2f"
       },
       "fr": {
-        "src_sha256": "4cf191dc8aa099fb37c7c5039086e5fbf673bb4c44c1816d54906431c6e9faa0",
-        "updated": "2026-10-21T14:14:09",
-        "tag": "18c02f5"
+        "src_sha256": "9af062ee8fa09b3ab2c79f00a1d153025d79f554063df8dd671472a6ab777770",
+        "updated": "2026-11-19T09:57:57",
+        "tag": "ab96d2f"
       },
       "zh": {
-        "src_sha256": "4cf191dc8aa099fb37c7c5039086e5fbf673bb4c44c1816d54906431c6e9faa0",
-        "updated": "2026-10-21T14:16:19",
-        "tag": "18c02f5"
+        "src_sha256": "9af062ee8fa09b3ab2c79f00a1d153025d79f554063df8dd671472a6ab777770",
+        "updated": "2026-11-19T10:00:20",
+        "tag": "ab96d2f"
       }
     },
     "b_installation.markdown": {
       "it": {
-        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
-        "updated": "2026-10-19T16:21:34",
-        "tag": "048227a"
+        "src_sha256": "7e21371fca3d90a373d8a52e2a7def316410717187152d122799318a15510547",
+        "updated": "2026-11-19T10:05:31",
+        "tag": "ab96d2f"
       },
       "ja": {
-        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
-        "updated": "2026-10-20T00:34:29",
-        "tag": "048227a"
+        "src_sha256": "7e21371fca3d90a373d8a52e2a7def316410717187152d122799318a15510547",
+        "updated": "2026-11-19T10:11:00",
+        "tag": "ab96d2f"
       },
       "fr": {
-        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
-        "updated": "2026-10-20T09:31:52",
-        "tag": "048227a"
+        "src_sha256": "7e21371fca3d90a373d8a52e2a7def316410717187152d122799318a15510547",
+        "updated": "2026-11-19T10:16:14",
+        "tag": "ab96d2f"
       },
       "zh": {
-        "src_sha256": "542708d930b8ab5043dcd06897330401e2fcf0ef1e463dd0877a03ce207184ed",
-        "updated": "2026-10-20T09:36:14",
-        "tag": "048227a"
+        "src_sha256": "7e21371fca3d90a373d8a52e2a7def316410717187152d122799318a15510547",
+        "updated": "2026-11-19T10:21:16",
+        "tag": "ab96d2f"
       }
     },
     "c_examples.markdown": {
@@ -182,24 +186,24 @@
   "home": {
     "index.markdown": {
       "it": {
-        "src_sha256": "c86f42582228999d2606cb519dc165a22302213f7805b724f734fc36bd64bdab",
-        "updated": "2026-10-21T14:18:27",
-        "tag": "3c6d0d8"
+        "src_sha256": "b734581ec4be3431dfe3a24a48875c1e2b94962a0fa2ac7d058aac999fa43141",
+        "updated": "2026-11-19T10:24:06",
+        "tag": "79d9885"
       },
       "ja": {
-        "src_sha256": "23ac85dd9f99a4b5aaa2d4545ace092b137d8e5696d73c85b9cc34bce4f7dbc4",
-        "updated": "2026-10-21T14:20:53",
-        "tag": "3c6d0d8"
+        "src_sha256": "be5217d82ff6ae63c74be60bc4dcfdf8569198da2155ef128d62b9eac0841ac2",
+        "updated": "2026-11-19T10:27:13",
+        "tag": "79d9885"
       },
       "fr": {
-        "src_sha256": "23ac85dd9f99a4b5aaa2d4545ace092b137d8e5696d73c85b9cc34bce4f7dbc4",
-        "updated": "2026-10-21T14:22:58",
-        "tag": "3c6d0d8"
+        "src_sha256": "be5217d82ff6ae63c74be60bc4dcfdf8569198da2155ef128d62b9eac0841ac2",
+        "updated": "2026-11-19T10:30:00",
+        "tag": "79d9885"
       },
       "zh": {
-        "src_sha256": "23ac85dd9f99a4b5aaa2d4545ace092b137d8e5696d73c85b9cc34bce4f7dbc4",
-        "updated": "2026-10-21T14:25:09",
-        "tag": "3c6d0d8"
+        "src_sha256": "be5217d82ff6ae63c74be60bc4dcfdf8569198da2155ef128d62b9eac0841ac2",
+        "updated": "2026-11-19T10:32:53",
+        "tag": "79d9885"
       }
     },
     "p_profile.markdown": {
@@ -248,24 +252,24 @@
     },
     "p_showcase.markdown": {
       "it": {
-        "src_sha256": "53e064db3093cb4b5568a69aad4e1986ece9bc6b92cee8b25f90e36d33b66404",
-        "updated": "2026-10-13T18:31:10",
-        "tag": "6c08880"
+        "src_sha256": "2ef05832f276a2e82bbb41eba7f5f0cfa665e2a9288696aebfc010b8a6c50f3f",
+        "updated": "2026-11-19T10:34:20",
+        "tag": "79d9885"
       },
       "ja": {
-        "src_sha256": "53e064db3093cb4b5568a69aad4e1986ece9bc6b92cee8b25f90e36d33b66404",
-        "updated": "2026-10-13T18:32:54",
-        "tag": "6c08880"
+        "src_sha256": "2ef05832f276a2e82bbb41eba7f5f0cfa665e2a9288696aebfc010b8a6c50f3f",
+        "updated": "2026-11-19T10:35:44",
+        "tag": "79d9885"
       },
       "fr": {
-        "src_sha256": "53e064db3093cb4b5568a69aad4e1986ece9bc6b92cee8b25f90e36d33b66404",
-        "updated": "2026-10-13T18:34:20",
-        "tag": "6c08880"
+        "src_sha256": "2ef05832f276a2e82bbb41eba7f5f0cfa665e2a9288696aebfc010b8a6c50f3f",
+        "updated": "2026-11-19T10:37:05",
+        "tag": "79d9885"
       },
       "zh": {
-        "src_sha256": "53e064db3093cb4b5568a69aad4e1986ece9bc6b92cee8b25f90e36d33b66404",
-        "updated": "2026-10-13T18:35:45",
-        "tag": "6c08880"
+        "src_sha256": "2ef05832f276a2e82bbb41eba7f5f0cfa665e2a9288696aebfc010b8a6c50f3f",
+        "updated": "2026-11-19T10:38:24",
+        "tag": "79d9885"
       }
     },
     "e_projects.markdown": {
@@ -314,46 +318,46 @@
     },
     "weekly.markdown": {
       "it": {
-        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
-        "updated": "2026-10-20T00:42:06",
-        "tag": "1a1aa57"
+        "src_sha256": "cafbcb38b1025d3b33a4b3d6c2f427be03710e240099230e8db5ae0c90070b94",
+        "updated": "2026-11-19T10:38:51",
+        "tag": "79d9885"
       },
       "ja": {
-        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
-        "updated": "2026-10-20T00:48:19",
-        "tag": "1a1aa57"
+        "src_sha256": "cafbcb38b1025d3b33a4b3d6c2f427be03710e240099230e8db5ae0c90070b94",
+        "updated": "2026-11-19T10:39:16",
+        "tag": "79d9885"
       },
       "fr": {
-        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
-        "updated": "2026-10-20T00:48:46",
-        "tag": "1a1aa57"
+        "src_sha256": "cafbcb38b1025d3b33a4b3d6c2f427be03710e240099230e8db5ae0c90070b94",
+        "updated": "2026-11-19T10:39:44",
+        "tag": "79d9885"
       },
       "zh": {
-        "src_sha256": "41addeefb9a86642914219481e3a8cf06b4fb147f0b7d5bd16850349ede1dd35",
-        "updated": "2026-10-20T00:52:51",
-        "tag": "1a1aa57"
+        "src_sha256": "cafbcb38b1025d3b33a4b3d6c2f427be03710e240099230e8db5ae0c90070b94",
+        "updated": "2026-11-19T10:40:08",
+        "tag": "79d9885"
       }
     },
     "y_directory.markdown": {
       "it": {
-        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
-        "updated": "2026-10-20T00:53:08",
-        "tag": "1a1aa57"
+        "src_sha256": "fa5d36b856508053539fe6f2c1ca23a6d35c61a7990479a31b04bb25ebe3eabd",
+        "updated": "2026-11-19T10:40:24",
+        "tag": "79d9885"
       },
       "ja": {
-        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
-        "updated": "2026-10-20T01:01:36",
-        "tag": "1a1aa57"
+        "src_sha256": "fa5d36b856508053539fe6f2c1ca23a6d35c61a7990479a31b04bb25ebe3eabd",
+        "updated": "2026-11-19T10:40:40",
+        "tag": "79d9885"
       },
       "fr": {
-        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
-        "updated": "2026-10-20T01:01:53",
-        "tag": "1a1aa57"
+        "src_sha256": "fa5d36b856508053539fe6f2c1ca23a6d35c61a7990479a31b04bb25ebe3eabd",
+        "updated": "2026-11-19T10:40:56",
+        "tag": "79d9885"
       },
       "zh": {
-        "src_sha256": "12af902b3a5c7e0849a273acc979ab86de36fc6c6e26a5df9650d40e84fc2203",
-        "updated": "2026-10-20T01:02:10",
-        "tag": "1a1aa57"
+        "src_sha256": "fa5d36b856508053539fe6f2c1ca23a6d35c61a7990479a31b04bb25ebe3eabd",
+        "updated": "2026-11-19T10:41:13",
+        "tag": "79d9885"
       }
     }
   },
@@ -1324,13 +1328,13 @@
   "gemc/src-messages": {
     "translations/en.yaml": {
       "it": {
-        "src_sha256": "7d5451361191f403210a4eebb80f1dd6b0ee7745173585a39b312c2303e1a1be",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T14:27:37",
+        "src_sha256": "fa0294a872d5ec62515d7705c740b1fa3ab7304820274d4ec9768cdb04027f39",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:16:10",
         "complete": true,
-        "translated": 533,
-        "total": 533,
+        "translated": 536,
+        "total": 536,
         "messages": {
           "\n%1 Event Number:  %2\n%3 Thread ID:  %4\n%5 Time Stamp:  %6": {
             "src_sha256": "e517ee941c1b71fe892ee908efa0b9f88051cbf4eefd48a2784ba49a6d75879f",
@@ -3996,17 +4000,32 @@
             "src_sha256": "0672883cc13b01c2df78819f80b0d4098a6241b4d92a8d5f643e8a4be270c753",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T14:27:37"
+          },
+          "Detector variable %1 conflicts with reserved ROOT event metadata.": {
+            "src_sha256": "505ba250c6148e10794a397c8c045b3c852fcd525edf561f711db52b9ab71c67",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:10"
+          },
+          "Mie size %1 mismatch: photonEnergy has size %2": {
+            "src_sha256": "b61609db101720616e0dfd1e89f584e7eac9e19df11ee193ed20e0cebba69833",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:10"
+          },
+          "The constructor of <%1> must have 5 or 11 parameters.": {
+            "src_sha256": "774f38af198f76872e6057a2f024736967ec02f29d1ee0ee9a330c173cf12761",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:10"
           }
         }
       },
       "ja": {
-        "src_sha256": "7d5451361191f403210a4eebb80f1dd6b0ee7745173585a39b312c2303e1a1be",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T14:27:47",
+        "src_sha256": "fa0294a872d5ec62515d7705c740b1fa3ab7304820274d4ec9768cdb04027f39",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:16:22",
         "complete": true,
-        "translated": 533,
-        "total": 533,
+        "translated": 536,
+        "total": 536,
         "messages": {
           "\n%1 Event Number:  %2\n%3 Thread ID:  %4\n%5 Time Stamp:  %6": {
             "src_sha256": "e517ee941c1b71fe892ee908efa0b9f88051cbf4eefd48a2784ba49a6d75879f",
@@ -6672,17 +6691,32 @@
             "src_sha256": "0672883cc13b01c2df78819f80b0d4098a6241b4d92a8d5f643e8a4be270c753",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T14:27:47"
+          },
+          "Detector variable %1 conflicts with reserved ROOT event metadata.": {
+            "src_sha256": "505ba250c6148e10794a397c8c045b3c852fcd525edf561f711db52b9ab71c67",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:22"
+          },
+          "Mie size %1 mismatch: photonEnergy has size %2": {
+            "src_sha256": "b61609db101720616e0dfd1e89f584e7eac9e19df11ee193ed20e0cebba69833",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:22"
+          },
+          "The constructor of <%1> must have 5 or 11 parameters.": {
+            "src_sha256": "774f38af198f76872e6057a2f024736967ec02f29d1ee0ee9a330c173cf12761",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:22"
           }
         }
       },
       "fr": {
-        "src_sha256": "7d5451361191f403210a4eebb80f1dd6b0ee7745173585a39b312c2303e1a1be",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T14:28:01",
+        "src_sha256": "fa0294a872d5ec62515d7705c740b1fa3ab7304820274d4ec9768cdb04027f39",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:16:38",
         "complete": true,
-        "translated": 533,
-        "total": 533,
+        "translated": 536,
+        "total": 536,
         "messages": {
           "\n%1 Event Number:  %2\n%3 Thread ID:  %4\n%5 Time Stamp:  %6": {
             "src_sha256": "e517ee941c1b71fe892ee908efa0b9f88051cbf4eefd48a2784ba49a6d75879f",
@@ -9348,17 +9382,32 @@
             "src_sha256": "0672883cc13b01c2df78819f80b0d4098a6241b4d92a8d5f643e8a4be270c753",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T14:28:01"
+          },
+          "Detector variable %1 conflicts with reserved ROOT event metadata.": {
+            "src_sha256": "505ba250c6148e10794a397c8c045b3c852fcd525edf561f711db52b9ab71c67",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:38"
+          },
+          "Mie size %1 mismatch: photonEnergy has size %2": {
+            "src_sha256": "b61609db101720616e0dfd1e89f584e7eac9e19df11ee193ed20e0cebba69833",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:38"
+          },
+          "The constructor of <%1> must have 5 or 11 parameters.": {
+            "src_sha256": "774f38af198f76872e6057a2f024736967ec02f29d1ee0ee9a330c173cf12761",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:38"
           }
         }
       },
       "zh": {
-        "src_sha256": "7d5451361191f403210a4eebb80f1dd6b0ee7745173585a39b312c2303e1a1be",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T14:28:14",
+        "src_sha256": "fa0294a872d5ec62515d7705c740b1fa3ab7304820274d4ec9768cdb04027f39",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:16:48",
         "complete": true,
-        "translated": 533,
-        "total": 533,
+        "translated": 536,
+        "total": 536,
         "messages": {
           "\n%1 Event Number:  %2\n%3 Thread ID:  %4\n%5 Time Stamp:  %6": {
             "src_sha256": "e517ee941c1b71fe892ee908efa0b9f88051cbf4eefd48a2784ba49a6d75879f",
@@ -12024,6 +12073,21 @@
             "src_sha256": "0672883cc13b01c2df78819f80b0d4098a6241b4d92a8d5f643e8a4be270c753",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T14:28:14"
+          },
+          "Detector variable %1 conflicts with reserved ROOT event metadata.": {
+            "src_sha256": "505ba250c6148e10794a397c8c045b3c852fcd525edf561f711db52b9ab71c67",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:48"
+          },
+          "Mie size %1 mismatch: photonEnergy has size %2": {
+            "src_sha256": "b61609db101720616e0dfd1e89f584e7eac9e19df11ee193ed20e0cebba69833",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:48"
+          },
+          "The constructor of <%1> must have 5 or 11 parameters.": {
+            "src_sha256": "774f38af198f76872e6057a2f024736967ec02f29d1ee0ee9a330c173cf12761",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:16:48"
           }
         }
       }
@@ -13140,13 +13204,13 @@
   "gemc/src-gui": {
     "translations/gui/en.ts": {
       "it": {
-        "src_sha256": "ad14760f4ce72ee6de826670aea4d8d9e177eb14d903f57aaa936c1c809f1eb7",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T08:23:29",
+        "src_sha256": "245b242e2f8eaba45d42c29e84493c0b7ecf90cbe36199cb6427da50a6b93974",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:17:21",
         "complete": true,
-        "translated": 326,
-        "total": 326,
+        "translated": 357,
+        "total": 357,
         "messages": {
           "[\"DBSelectView\", \"Database \\\"%1\\\" could not be opened or validated.\", \"\", false]": {
             "src_sha256": "7e62616a87603cff15feafc2287035947bbb55ab096305ccf8f0d262888c5125",
@@ -14203,16 +14267,6 @@
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:22:05"
           },
-          "[\"GTree\", \"Draw Logical Overlaps %1\", \"\", false]": {
-            "src_sha256": "4558b41f9ac79cb2bf71b8e1ca49394ce3cda32f2b87de30fed90821ed6a1253",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:22:05"
-          },
-          "[\"GTree\", \"Draw Logical Overlaps will be implemented when Geant4 fixes the\\nG4ToolsSGSceneHandler::GetOrCreateNode \\\"World mis-match\\\" crash\\ntriggered by /vis/drawLogicalVolume in Geant4 11.4.3.\", \"\", false]": {
-            "src_sha256": "7dc1e7a7f3e2b2f89d6565847bfb057356e54b5e7bc1bf65eca6c7d709030135",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:22:05"
-          },
           "[\"GTree\", \"Inspect %1\", \"\", false]": {
             "src_sha256": "c28a39e04484b76c5c846ad851474f586a9d15f245c54b9472221e91ef326945",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
@@ -14250,11 +14304,6 @@
           },
           "[\"GTree\", \"Name: %1\", \"\", false]": {
             "src_sha256": "70acd4bcf1400132c36e8f2deb600e2da8c07383f205fd2435be20bda18790ea",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:22:05"
-          },
-          "[\"GTree\", \"Not yet implemented\", \"\", false]": {
-            "src_sha256": "430b9e66f88a60aae17438385a1c51401131d6375355e14ce9e60d707e9f128b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:22:05"
           },
@@ -14777,17 +14826,187 @@
             "src_sha256": "1ce5ee71de11a0de6ba4ed5b470a6b5a9235a1361f61dff10c8ba8ae3f82966b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:23:29"
+          },
+          "[\"G4DisplayUtilities\", \"Start the XR server and export one event.\", \"\", false]": {
+            "src_sha256": "758cf9ee5ec9f6f11e67007c9e2437d80aa65c81a2cb371aef7c99c9695fc4e9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"G4DisplayUtilities\", \"XR Server\", \"\", false]": {
+            "src_sha256": "00a72dfb8ba988d06d726c141e8b532c53f568a232a251038f04c461d7f0f59b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"GGuiIcons\", \"Physics\", \"\", false]": {
+            "src_sha256": "82985aaef1d0a92d2be2ef37ba9b4d1de885fb2ced13028405dd253726fa47ff",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"GTree\", \"Draw Logical Overlap within %1\", \"\", false]": {
+            "src_sha256": "282ade205adcd7d6fea31fb5173b4a6888198d154452901f8fdec88451c563d8",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"GemcGUI\", \"Physics\", \"\", false]": {
+            "src_sha256": "55df15cbe8f0fba8c2da2a67c50c0737153f45295ad7dce166ede5e93aadf003",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"%1 particle types\", \"\", false]": {
+            "src_sha256": "b9ffe18901a3338ca7b648cc68abf2f0aef2ecb117c6d7cd483b3f62aadad600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Add a physics constructor to the reference list.\", \"\", false]": {
+            "src_sha256": "ee65bee313c3a6272abb10372d98aeb082b408c54fb31d553efd5850998a7f50",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Applies to\", \"\", false]": {
+            "src_sha256": "d05f2aa012c67edcb0e50330baf6dcb527f4c7ee8e1a72b55d3068e481a80e23",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Apply physics\", \"\", false]": {
+            "src_sha256": "bfd66a31269df973f45577f4cf8d9aba3ae0de0546c11569e839187c143b8eee",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Changes are applied before the next run, or with Apply physics.\", \"\", false]": {
+            "src_sha256": "96ae68a98e194d74af49a4dfd3bb0763d98dbc41ba65fc17301c0d4bbd34be2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Check processes to enable them. Category checkboxes control the whole group. Combined processes are controlled as a single entry.\", \"\", false]": {
+            "src_sha256": "c7253fc746aed69791f44a459dd5ee19f41d672cff7471a8860e3c7720da78a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Decay\", \"\", false]": {
+            "src_sha256": "7b45a3132132b51fde145e10dc1a12373758936a04325e1c49f20744ea7cab2c",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Electromagnetic\", \"\", false]": {
+            "src_sha256": "7d1fd706a4368b68d0d0ab6ea0550dffcd3adac25d4a534b9425a2f6e9311c47",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Filter processes\", \"\", false]": {
+            "src_sha256": "f9508097f039ed1c34766de4c744a0bde92f00e0df16b385a0d8120fcf4ea0fb",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"General\", \"\", false]": {
+            "src_sha256": "edaa854d5ab3481365d8ac55eae949b0bd7c52f5a74716228b7fce3b82c60fcc",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Hadronic\", \"\", false]": {
+            "src_sha256": "85f69561938e7015d957516439e884d1fc6bf365c01f1ca1da266172b4b8f5b9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Optical\", \"\", false]": {
+            "src_sha256": "913691dbf93bbf0b8c101c4027f7b609e23461344f985d8fd0c48f7c1eacca66",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Other\", \"\", false]": {
+            "src_sha256": "ea80828b8618e0719dd5a9a093d3994e91baa2247723c8ce7ee796ef1620c01e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Parallel worlds\", \"\", false]": {
+            "src_sha256": "e586ec53086cbb1cfa524f68c9cf7aa8ee69b90910bc14793843ac5579fada2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Parameterisation\", \"\", false]": {
+            "src_sha256": "be8578c73cce23a6d628e3ed8860f8b14e8f844e958ee84d0c3c6ffcff5db404",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Physics\", \"\", false]": {
+            "src_sha256": "e38db0124e94f856d492a5ca7392db69b7edf7077d8be39dcedcb5a16cf349b0",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Physics applied. The next run uses these settings.\", \"\", false]": {
+            "src_sha256": "34333c1e3527168173c7f5231302898f13ec784c60dddaf5cdec502ab55a9588",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Physics changes pending. They will be applied before the next run.\", \"\", false]": {
+            "src_sha256": "d91dca95cee6aeeea3b26c05010faddbe9d3baf1b2a42fe08fe166e5dc492a8e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Physics constructor\", \"\", false]": {
+            "src_sha256": "ec703f1b50fe5010f40195a5b7cf6729548dd5ee84a05ebdc1d4adcd4dbe28c9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Physics controls require a GEMC run manager.\", \"\", false]": {
+            "src_sha256": "838c73cf4d5626e34affe3f96b5168a570ec144689fbe567cdd1cbfd4979324a",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Physics list\", \"\", false]": {
+            "src_sha256": "3b0b194531e541cb0ad5f18f8546008f12a8656f074399615ba9b1dfe980c2e5",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Process\", \"\", false]": {
+            "src_sha256": "670d45e63eca36ffab15bcbca0779ec4917bf7755c450cdb0cc3ac6ea2d748a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Processes\", \"\", false]": {
+            "src_sha256": "0563671f3b3a5f7c846bc569c9fe1224a39c787657903f1b126ffe1826c9e779",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Processes appear after physics initialization.\", \"\", false]": {
+            "src_sha256": "f58c5f029156101ae123d3c014a46e40320e00bf8a98d48b7d5436e969f249cf",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Production range cut\", \"\", false]": {
+            "src_sha256": "12712adc8effdb1002f0d5e108afa173c0e101c52b23820cbf1dc1ee311fdb24",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Range cut for producing secondary gamma, electron, positron, and proton tracks. This does not stop existing tracks below an energy threshold.\", \"\", false]": {
+            "src_sha256": "4b7ada15716ff5774f10d397bb3116dd3aabb77455da6bb4000d83f9dbb99600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Reference list\", \"\", false]": {
+            "src_sha256": "b58764ab914ab3936b069e3e8ad1d8a609e2103787e8d42be1127c5fd93387be",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Transportation\", \"\", false]": {
+            "src_sha256": "87b7be7ab649466fc20237cd194f883b935cc495ec609fd855b8fb874e9ac407",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
+          },
+          "[\"PhysicsView\", \"Transportation is required for tracking.\", \"\", false]": {
+            "src_sha256": "5f651cd95a8d8583234bb2f6aa8c12102ea973bfd26768edb14864b99b79f0d7",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:17:21"
           }
         }
       },
       "ja": {
-        "src_sha256": "ad14760f4ce72ee6de826670aea4d8d9e177eb14d903f57aaa936c1c809f1eb7",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T08:29:16",
+        "src_sha256": "245b242e2f8eaba45d42c29e84493c0b7ecf90cbe36199cb6427da50a6b93974",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:18:03",
         "complete": true,
-        "translated": 326,
-        "total": 326,
+        "translated": 357,
+        "total": 357,
         "messages": {
           "[\"DBSelectView\", \"Database \\\"%1\\\" could not be opened or validated.\", \"\", false]": {
             "src_sha256": "7e62616a87603cff15feafc2287035947bbb55ab096305ccf8f0d262888c5125",
@@ -15844,16 +16063,6 @@
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:27:52"
           },
-          "[\"GTree\", \"Draw Logical Overlaps %1\", \"\", false]": {
-            "src_sha256": "4558b41f9ac79cb2bf71b8e1ca49394ce3cda32f2b87de30fed90821ed6a1253",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:27:52"
-          },
-          "[\"GTree\", \"Draw Logical Overlaps will be implemented when Geant4 fixes the\\nG4ToolsSGSceneHandler::GetOrCreateNode \\\"World mis-match\\\" crash\\ntriggered by /vis/drawLogicalVolume in Geant4 11.4.3.\", \"\", false]": {
-            "src_sha256": "7dc1e7a7f3e2b2f89d6565847bfb057356e54b5e7bc1bf65eca6c7d709030135",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:27:52"
-          },
           "[\"GTree\", \"Inspect %1\", \"\", false]": {
             "src_sha256": "c28a39e04484b76c5c846ad851474f586a9d15f245c54b9472221e91ef326945",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
@@ -15891,11 +16100,6 @@
           },
           "[\"GTree\", \"Name: %1\", \"\", false]": {
             "src_sha256": "70acd4bcf1400132c36e8f2deb600e2da8c07383f205fd2435be20bda18790ea",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:27:52"
-          },
-          "[\"GTree\", \"Not yet implemented\", \"\", false]": {
-            "src_sha256": "430b9e66f88a60aae17438385a1c51401131d6375355e14ce9e60d707e9f128b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:27:52"
           },
@@ -16418,17 +16622,187 @@
             "src_sha256": "1ce5ee71de11a0de6ba4ed5b470a6b5a9235a1361f61dff10c8ba8ae3f82966b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:29:16"
+          },
+          "[\"G4DisplayUtilities\", \"Start the XR server and export one event.\", \"\", false]": {
+            "src_sha256": "758cf9ee5ec9f6f11e67007c9e2437d80aa65c81a2cb371aef7c99c9695fc4e9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"G4DisplayUtilities\", \"XR Server\", \"\", false]": {
+            "src_sha256": "00a72dfb8ba988d06d726c141e8b532c53f568a232a251038f04c461d7f0f59b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"GGuiIcons\", \"Physics\", \"\", false]": {
+            "src_sha256": "82985aaef1d0a92d2be2ef37ba9b4d1de885fb2ced13028405dd253726fa47ff",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"GTree\", \"Draw Logical Overlap within %1\", \"\", false]": {
+            "src_sha256": "282ade205adcd7d6fea31fb5173b4a6888198d154452901f8fdec88451c563d8",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"GemcGUI\", \"Physics\", \"\", false]": {
+            "src_sha256": "55df15cbe8f0fba8c2da2a67c50c0737153f45295ad7dce166ede5e93aadf003",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"%1 particle types\", \"\", false]": {
+            "src_sha256": "b9ffe18901a3338ca7b648cc68abf2f0aef2ecb117c6d7cd483b3f62aadad600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Add a physics constructor to the reference list.\", \"\", false]": {
+            "src_sha256": "ee65bee313c3a6272abb10372d98aeb082b408c54fb31d553efd5850998a7f50",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Applies to\", \"\", false]": {
+            "src_sha256": "d05f2aa012c67edcb0e50330baf6dcb527f4c7ee8e1a72b55d3068e481a80e23",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Apply physics\", \"\", false]": {
+            "src_sha256": "bfd66a31269df973f45577f4cf8d9aba3ae0de0546c11569e839187c143b8eee",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Changes are applied before the next run, or with Apply physics.\", \"\", false]": {
+            "src_sha256": "96ae68a98e194d74af49a4dfd3bb0763d98dbc41ba65fc17301c0d4bbd34be2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Check processes to enable them. Category checkboxes control the whole group. Combined processes are controlled as a single entry.\", \"\", false]": {
+            "src_sha256": "c7253fc746aed69791f44a459dd5ee19f41d672cff7471a8860e3c7720da78a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Decay\", \"\", false]": {
+            "src_sha256": "7b45a3132132b51fde145e10dc1a12373758936a04325e1c49f20744ea7cab2c",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Electromagnetic\", \"\", false]": {
+            "src_sha256": "7d1fd706a4368b68d0d0ab6ea0550dffcd3adac25d4a534b9425a2f6e9311c47",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Filter processes\", \"\", false]": {
+            "src_sha256": "f9508097f039ed1c34766de4c744a0bde92f00e0df16b385a0d8120fcf4ea0fb",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"General\", \"\", false]": {
+            "src_sha256": "edaa854d5ab3481365d8ac55eae949b0bd7c52f5a74716228b7fce3b82c60fcc",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Hadronic\", \"\", false]": {
+            "src_sha256": "85f69561938e7015d957516439e884d1fc6bf365c01f1ca1da266172b4b8f5b9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Optical\", \"\", false]": {
+            "src_sha256": "913691dbf93bbf0b8c101c4027f7b609e23461344f985d8fd0c48f7c1eacca66",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Other\", \"\", false]": {
+            "src_sha256": "ea80828b8618e0719dd5a9a093d3994e91baa2247723c8ce7ee796ef1620c01e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Parallel worlds\", \"\", false]": {
+            "src_sha256": "e586ec53086cbb1cfa524f68c9cf7aa8ee69b90910bc14793843ac5579fada2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Parameterisation\", \"\", false]": {
+            "src_sha256": "be8578c73cce23a6d628e3ed8860f8b14e8f844e958ee84d0c3c6ffcff5db404",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Physics\", \"\", false]": {
+            "src_sha256": "e38db0124e94f856d492a5ca7392db69b7edf7077d8be39dcedcb5a16cf349b0",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Physics applied. The next run uses these settings.\", \"\", false]": {
+            "src_sha256": "34333c1e3527168173c7f5231302898f13ec784c60dddaf5cdec502ab55a9588",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Physics changes pending. They will be applied before the next run.\", \"\", false]": {
+            "src_sha256": "d91dca95cee6aeeea3b26c05010faddbe9d3baf1b2a42fe08fe166e5dc492a8e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Physics constructor\", \"\", false]": {
+            "src_sha256": "ec703f1b50fe5010f40195a5b7cf6729548dd5ee84a05ebdc1d4adcd4dbe28c9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Physics controls require a GEMC run manager.\", \"\", false]": {
+            "src_sha256": "838c73cf4d5626e34affe3f96b5168a570ec144689fbe567cdd1cbfd4979324a",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Physics list\", \"\", false]": {
+            "src_sha256": "3b0b194531e541cb0ad5f18f8546008f12a8656f074399615ba9b1dfe980c2e5",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Process\", \"\", false]": {
+            "src_sha256": "670d45e63eca36ffab15bcbca0779ec4917bf7755c450cdb0cc3ac6ea2d748a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Processes\", \"\", false]": {
+            "src_sha256": "0563671f3b3a5f7c846bc569c9fe1224a39c787657903f1b126ffe1826c9e779",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Processes appear after physics initialization.\", \"\", false]": {
+            "src_sha256": "f58c5f029156101ae123d3c014a46e40320e00bf8a98d48b7d5436e969f249cf",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Production range cut\", \"\", false]": {
+            "src_sha256": "12712adc8effdb1002f0d5e108afa173c0e101c52b23820cbf1dc1ee311fdb24",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Range cut for producing secondary gamma, electron, positron, and proton tracks. This does not stop existing tracks below an energy threshold.\", \"\", false]": {
+            "src_sha256": "4b7ada15716ff5774f10d397bb3116dd3aabb77455da6bb4000d83f9dbb99600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Reference list\", \"\", false]": {
+            "src_sha256": "b58764ab914ab3936b069e3e8ad1d8a609e2103787e8d42be1127c5fd93387be",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Transportation\", \"\", false]": {
+            "src_sha256": "87b7be7ab649466fc20237cd194f883b935cc495ec609fd855b8fb874e9ac407",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
+          },
+          "[\"PhysicsView\", \"Transportation is required for tracking.\", \"\", false]": {
+            "src_sha256": "5f651cd95a8d8583234bb2f6aa8c12102ea973bfd26768edb14864b99b79f0d7",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:03"
           }
         }
       },
       "fr": {
-        "src_sha256": "ad14760f4ce72ee6de826670aea4d8d9e177eb14d903f57aaa936c1c809f1eb7",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T08:34:43",
+        "src_sha256": "245b242e2f8eaba45d42c29e84493c0b7ecf90cbe36199cb6427da50a6b93974",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:18:28",
         "complete": true,
-        "translated": 326,
-        "total": 326,
+        "translated": 357,
+        "total": 357,
         "messages": {
           "[\"DBSelectView\", \"Database \\\"%1\\\" could not be opened or validated.\", \"\", false]": {
             "src_sha256": "7e62616a87603cff15feafc2287035947bbb55ab096305ccf8f0d262888c5125",
@@ -17485,16 +17859,6 @@
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:33:21"
           },
-          "[\"GTree\", \"Draw Logical Overlaps %1\", \"\", false]": {
-            "src_sha256": "4558b41f9ac79cb2bf71b8e1ca49394ce3cda32f2b87de30fed90821ed6a1253",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:33:21"
-          },
-          "[\"GTree\", \"Draw Logical Overlaps will be implemented when Geant4 fixes the\\nG4ToolsSGSceneHandler::GetOrCreateNode \\\"World mis-match\\\" crash\\ntriggered by /vis/drawLogicalVolume in Geant4 11.4.3.\", \"\", false]": {
-            "src_sha256": "7dc1e7a7f3e2b2f89d6565847bfb057356e54b5e7bc1bf65eca6c7d709030135",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:33:21"
-          },
           "[\"GTree\", \"Inspect %1\", \"\", false]": {
             "src_sha256": "c28a39e04484b76c5c846ad851474f586a9d15f245c54b9472221e91ef326945",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
@@ -17532,11 +17896,6 @@
           },
           "[\"GTree\", \"Name: %1\", \"\", false]": {
             "src_sha256": "70acd4bcf1400132c36e8f2deb600e2da8c07383f205fd2435be20bda18790ea",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:33:21"
-          },
-          "[\"GTree\", \"Not yet implemented\", \"\", false]": {
-            "src_sha256": "430b9e66f88a60aae17438385a1c51401131d6375355e14ce9e60d707e9f128b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:33:21"
           },
@@ -18059,17 +18418,187 @@
             "src_sha256": "1ce5ee71de11a0de6ba4ed5b470a6b5a9235a1361f61dff10c8ba8ae3f82966b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:34:43"
+          },
+          "[\"G4DisplayUtilities\", \"Start the XR server and export one event.\", \"\", false]": {
+            "src_sha256": "758cf9ee5ec9f6f11e67007c9e2437d80aa65c81a2cb371aef7c99c9695fc4e9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"G4DisplayUtilities\", \"XR Server\", \"\", false]": {
+            "src_sha256": "00a72dfb8ba988d06d726c141e8b532c53f568a232a251038f04c461d7f0f59b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"GGuiIcons\", \"Physics\", \"\", false]": {
+            "src_sha256": "82985aaef1d0a92d2be2ef37ba9b4d1de885fb2ced13028405dd253726fa47ff",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"GTree\", \"Draw Logical Overlap within %1\", \"\", false]": {
+            "src_sha256": "282ade205adcd7d6fea31fb5173b4a6888198d154452901f8fdec88451c563d8",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"GemcGUI\", \"Physics\", \"\", false]": {
+            "src_sha256": "55df15cbe8f0fba8c2da2a67c50c0737153f45295ad7dce166ede5e93aadf003",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"%1 particle types\", \"\", false]": {
+            "src_sha256": "b9ffe18901a3338ca7b648cc68abf2f0aef2ecb117c6d7cd483b3f62aadad600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Add a physics constructor to the reference list.\", \"\", false]": {
+            "src_sha256": "ee65bee313c3a6272abb10372d98aeb082b408c54fb31d553efd5850998a7f50",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Applies to\", \"\", false]": {
+            "src_sha256": "d05f2aa012c67edcb0e50330baf6dcb527f4c7ee8e1a72b55d3068e481a80e23",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Apply physics\", \"\", false]": {
+            "src_sha256": "bfd66a31269df973f45577f4cf8d9aba3ae0de0546c11569e839187c143b8eee",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Changes are applied before the next run, or with Apply physics.\", \"\", false]": {
+            "src_sha256": "96ae68a98e194d74af49a4dfd3bb0763d98dbc41ba65fc17301c0d4bbd34be2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Check processes to enable them. Category checkboxes control the whole group. Combined processes are controlled as a single entry.\", \"\", false]": {
+            "src_sha256": "c7253fc746aed69791f44a459dd5ee19f41d672cff7471a8860e3c7720da78a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Decay\", \"\", false]": {
+            "src_sha256": "7b45a3132132b51fde145e10dc1a12373758936a04325e1c49f20744ea7cab2c",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Electromagnetic\", \"\", false]": {
+            "src_sha256": "7d1fd706a4368b68d0d0ab6ea0550dffcd3adac25d4a534b9425a2f6e9311c47",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Filter processes\", \"\", false]": {
+            "src_sha256": "f9508097f039ed1c34766de4c744a0bde92f00e0df16b385a0d8120fcf4ea0fb",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"General\", \"\", false]": {
+            "src_sha256": "edaa854d5ab3481365d8ac55eae949b0bd7c52f5a74716228b7fce3b82c60fcc",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Hadronic\", \"\", false]": {
+            "src_sha256": "85f69561938e7015d957516439e884d1fc6bf365c01f1ca1da266172b4b8f5b9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Optical\", \"\", false]": {
+            "src_sha256": "913691dbf93bbf0b8c101c4027f7b609e23461344f985d8fd0c48f7c1eacca66",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Other\", \"\", false]": {
+            "src_sha256": "ea80828b8618e0719dd5a9a093d3994e91baa2247723c8ce7ee796ef1620c01e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Parallel worlds\", \"\", false]": {
+            "src_sha256": "e586ec53086cbb1cfa524f68c9cf7aa8ee69b90910bc14793843ac5579fada2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Parameterisation\", \"\", false]": {
+            "src_sha256": "be8578c73cce23a6d628e3ed8860f8b14e8f844e958ee84d0c3c6ffcff5db404",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Physics\", \"\", false]": {
+            "src_sha256": "e38db0124e94f856d492a5ca7392db69b7edf7077d8be39dcedcb5a16cf349b0",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Physics applied. The next run uses these settings.\", \"\", false]": {
+            "src_sha256": "34333c1e3527168173c7f5231302898f13ec784c60dddaf5cdec502ab55a9588",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Physics changes pending. They will be applied before the next run.\", \"\", false]": {
+            "src_sha256": "d91dca95cee6aeeea3b26c05010faddbe9d3baf1b2a42fe08fe166e5dc492a8e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Physics constructor\", \"\", false]": {
+            "src_sha256": "ec703f1b50fe5010f40195a5b7cf6729548dd5ee84a05ebdc1d4adcd4dbe28c9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Physics controls require a GEMC run manager.\", \"\", false]": {
+            "src_sha256": "838c73cf4d5626e34affe3f96b5168a570ec144689fbe567cdd1cbfd4979324a",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Physics list\", \"\", false]": {
+            "src_sha256": "3b0b194531e541cb0ad5f18f8546008f12a8656f074399615ba9b1dfe980c2e5",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Process\", \"\", false]": {
+            "src_sha256": "670d45e63eca36ffab15bcbca0779ec4917bf7755c450cdb0cc3ac6ea2d748a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Processes\", \"\", false]": {
+            "src_sha256": "0563671f3b3a5f7c846bc569c9fe1224a39c787657903f1b126ffe1826c9e779",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Processes appear after physics initialization.\", \"\", false]": {
+            "src_sha256": "f58c5f029156101ae123d3c014a46e40320e00bf8a98d48b7d5436e969f249cf",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Production range cut\", \"\", false]": {
+            "src_sha256": "12712adc8effdb1002f0d5e108afa173c0e101c52b23820cbf1dc1ee311fdb24",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Range cut for producing secondary gamma, electron, positron, and proton tracks. This does not stop existing tracks below an energy threshold.\", \"\", false]": {
+            "src_sha256": "4b7ada15716ff5774f10d397bb3116dd3aabb77455da6bb4000d83f9dbb99600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Reference list\", \"\", false]": {
+            "src_sha256": "b58764ab914ab3936b069e3e8ad1d8a609e2103787e8d42be1127c5fd93387be",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Transportation\", \"\", false]": {
+            "src_sha256": "87b7be7ab649466fc20237cd194f883b935cc495ec609fd855b8fb874e9ac407",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
+          },
+          "[\"PhysicsView\", \"Transportation is required for tracking.\", \"\", false]": {
+            "src_sha256": "5f651cd95a8d8583234bb2f6aa8c12102ea973bfd26768edb14864b99b79f0d7",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:18:28"
           }
         }
       },
       "zh": {
-        "src_sha256": "ad14760f4ce72ee6de826670aea4d8d9e177eb14d903f57aaa936c1c809f1eb7",
-        "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-        "tag": "0.5-2-g7c6dc89",
-        "updated": "2026-10-14T09:02:00",
+        "src_sha256": "245b242e2f8eaba45d42c29e84493c0b7ecf90cbe36199cb6427da50a6b93974",
+        "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+        "tag": "0.5-29-gdd746949",
+        "updated": "2026-11-19T14:19:03",
         "complete": true,
-        "translated": 326,
-        "total": 326,
+        "translated": 357,
+        "total": 357,
         "messages": {
           "[\"DBSelectView\", \"Database \\\"%1\\\" could not be opened or validated.\", \"\", false]": {
             "src_sha256": "7e62616a87603cff15feafc2287035947bbb55ab096305ccf8f0d262888c5125",
@@ -19126,16 +19655,6 @@
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:38:43"
           },
-          "[\"GTree\", \"Draw Logical Overlaps %1\", \"\", false]": {
-            "src_sha256": "4558b41f9ac79cb2bf71b8e1ca49394ce3cda32f2b87de30fed90821ed6a1253",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:38:43"
-          },
-          "[\"GTree\", \"Draw Logical Overlaps will be implemented when Geant4 fixes the\\nG4ToolsSGSceneHandler::GetOrCreateNode \\\"World mis-match\\\" crash\\ntriggered by /vis/drawLogicalVolume in Geant4 11.4.3.\", \"\", false]": {
-            "src_sha256": "7dc1e7a7f3e2b2f89d6565847bfb057356e54b5e7bc1bf65eca6c7d709030135",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:38:43"
-          },
           "[\"GTree\", \"Inspect %1\", \"\", false]": {
             "src_sha256": "c28a39e04484b76c5c846ad851474f586a9d15f245c54b9472221e91ef326945",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
@@ -19173,11 +19692,6 @@
           },
           "[\"GTree\", \"Name: %1\", \"\", false]": {
             "src_sha256": "70acd4bcf1400132c36e8f2deb600e2da8c07383f205fd2435be20bda18790ea",
-            "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
-            "updated": "2026-10-14T08:38:43"
-          },
-          "[\"GTree\", \"Not yet implemented\", \"\", false]": {
-            "src_sha256": "430b9e66f88a60aae17438385a1c51401131d6375355e14ce9e60d707e9f128b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T08:38:43"
           },
@@ -19700,6 +20214,176 @@
             "src_sha256": "1ce5ee71de11a0de6ba4ed5b470a6b5a9235a1361f61dff10c8ba8ae3f82966b",
             "source_commit": "7c6dc8979755c58e6fb8b84aeb90f279bff3f5f8",
             "updated": "2026-10-14T09:02:00"
+          },
+          "[\"G4DisplayUtilities\", \"Start the XR server and export one event.\", \"\", false]": {
+            "src_sha256": "758cf9ee5ec9f6f11e67007c9e2437d80aa65c81a2cb371aef7c99c9695fc4e9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"G4DisplayUtilities\", \"XR Server\", \"\", false]": {
+            "src_sha256": "00a72dfb8ba988d06d726c141e8b532c53f568a232a251038f04c461d7f0f59b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"GGuiIcons\", \"Physics\", \"\", false]": {
+            "src_sha256": "82985aaef1d0a92d2be2ef37ba9b4d1de885fb2ced13028405dd253726fa47ff",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"GTree\", \"Draw Logical Overlap within %1\", \"\", false]": {
+            "src_sha256": "282ade205adcd7d6fea31fb5173b4a6888198d154452901f8fdec88451c563d8",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"GemcGUI\", \"Physics\", \"\", false]": {
+            "src_sha256": "55df15cbe8f0fba8c2da2a67c50c0737153f45295ad7dce166ede5e93aadf003",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"%1 particle types\", \"\", false]": {
+            "src_sha256": "b9ffe18901a3338ca7b648cc68abf2f0aef2ecb117c6d7cd483b3f62aadad600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Add a physics constructor to the reference list.\", \"\", false]": {
+            "src_sha256": "ee65bee313c3a6272abb10372d98aeb082b408c54fb31d553efd5850998a7f50",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Applies to\", \"\", false]": {
+            "src_sha256": "d05f2aa012c67edcb0e50330baf6dcb527f4c7ee8e1a72b55d3068e481a80e23",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Apply physics\", \"\", false]": {
+            "src_sha256": "bfd66a31269df973f45577f4cf8d9aba3ae0de0546c11569e839187c143b8eee",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Changes are applied before the next run, or with Apply physics.\", \"\", false]": {
+            "src_sha256": "96ae68a98e194d74af49a4dfd3bb0763d98dbc41ba65fc17301c0d4bbd34be2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Check processes to enable them. Category checkboxes control the whole group. Combined processes are controlled as a single entry.\", \"\", false]": {
+            "src_sha256": "c7253fc746aed69791f44a459dd5ee19f41d672cff7471a8860e3c7720da78a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Decay\", \"\", false]": {
+            "src_sha256": "7b45a3132132b51fde145e10dc1a12373758936a04325e1c49f20744ea7cab2c",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Electromagnetic\", \"\", false]": {
+            "src_sha256": "7d1fd706a4368b68d0d0ab6ea0550dffcd3adac25d4a534b9425a2f6e9311c47",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Filter processes\", \"\", false]": {
+            "src_sha256": "f9508097f039ed1c34766de4c744a0bde92f00e0df16b385a0d8120fcf4ea0fb",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"General\", \"\", false]": {
+            "src_sha256": "edaa854d5ab3481365d8ac55eae949b0bd7c52f5a74716228b7fce3b82c60fcc",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Hadronic\", \"\", false]": {
+            "src_sha256": "85f69561938e7015d957516439e884d1fc6bf365c01f1ca1da266172b4b8f5b9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Optical\", \"\", false]": {
+            "src_sha256": "913691dbf93bbf0b8c101c4027f7b609e23461344f985d8fd0c48f7c1eacca66",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Other\", \"\", false]": {
+            "src_sha256": "ea80828b8618e0719dd5a9a093d3994e91baa2247723c8ce7ee796ef1620c01e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Parallel worlds\", \"\", false]": {
+            "src_sha256": "e586ec53086cbb1cfa524f68c9cf7aa8ee69b90910bc14793843ac5579fada2b",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Parameterisation\", \"\", false]": {
+            "src_sha256": "be8578c73cce23a6d628e3ed8860f8b14e8f844e958ee84d0c3c6ffcff5db404",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Physics\", \"\", false]": {
+            "src_sha256": "e38db0124e94f856d492a5ca7392db69b7edf7077d8be39dcedcb5a16cf349b0",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Physics applied. The next run uses these settings.\", \"\", false]": {
+            "src_sha256": "34333c1e3527168173c7f5231302898f13ec784c60dddaf5cdec502ab55a9588",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Physics changes pending. They will be applied before the next run.\", \"\", false]": {
+            "src_sha256": "d91dca95cee6aeeea3b26c05010faddbe9d3baf1b2a42fe08fe166e5dc492a8e",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Physics constructor\", \"\", false]": {
+            "src_sha256": "ec703f1b50fe5010f40195a5b7cf6729548dd5ee84a05ebdc1d4adcd4dbe28c9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Physics controls require a GEMC run manager.\", \"\", false]": {
+            "src_sha256": "838c73cf4d5626e34affe3f96b5168a570ec144689fbe567cdd1cbfd4979324a",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Physics list\", \"\", false]": {
+            "src_sha256": "3b0b194531e541cb0ad5f18f8546008f12a8656f074399615ba9b1dfe980c2e5",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Process\", \"\", false]": {
+            "src_sha256": "670d45e63eca36ffab15bcbca0779ec4917bf7755c450cdb0cc3ac6ea2d748a9",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Processes\", \"\", false]": {
+            "src_sha256": "0563671f3b3a5f7c846bc569c9fe1224a39c787657903f1b126ffe1826c9e779",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Processes appear after physics initialization.\", \"\", false]": {
+            "src_sha256": "f58c5f029156101ae123d3c014a46e40320e00bf8a98d48b7d5436e969f249cf",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Production range cut\", \"\", false]": {
+            "src_sha256": "12712adc8effdb1002f0d5e108afa173c0e101c52b23820cbf1dc1ee311fdb24",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Range cut for producing secondary gamma, electron, positron, and proton tracks. This does not stop existing tracks below an energy threshold.\", \"\", false]": {
+            "src_sha256": "4b7ada15716ff5774f10d397bb3116dd3aabb77455da6bb4000d83f9dbb99600",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Reference list\", \"\", false]": {
+            "src_sha256": "b58764ab914ab3936b069e3e8ad1d8a609e2103787e8d42be1127c5fd93387be",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Transportation\", \"\", false]": {
+            "src_sha256": "87b7be7ab649466fc20237cd194f883b935cc495ec609fd855b8fb874e9ac407",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
+          },
+          "[\"PhysicsView\", \"Transportation is required for tracking.\", \"\", false]": {
+            "src_sha256": "5f651cd95a8d8583234bb2f6aa8c12102ea973bfd26768edb14864b99b79f0d7",
+            "source_commit": "dd7469496ff0f45fa4f256c52f44f2f02492befb",
+            "updated": "2026-11-19T14:19:03"
           }
         }
       }

@@ -27,6 +27,8 @@ MAILTO=ungaro@jlab.org
 7-59/10 *  *  *  *  $rll -l $logs $sg/condor_io/run_priority_map.py -p -a -m 30
 8-59/10 *  *  *  *  $rll -l $logs $sg/db_io/mark_completed_submissions.py --write-to-db
 9-59/10 *  *  *  *  $rll -l $logs $sgd/db_io/mark_completed_submissions.py --write-to-db --database=CLAS12TEST
+1-59/5  *  *  *  *  $rll -l $logs $sg/condor_io/delete_jobs.py --apply
+2-59/5  *  *  *  *  $rll -l $logs $sgd/condor_io/delete_jobs.py --apply --database=CLAS12TEST
 #
 #
 MAILTO=baltzell@jlab.org
