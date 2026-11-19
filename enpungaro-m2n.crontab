@@ -18,7 +18,7 @@ logs=/opt/projects/cronjobs/logs
 4   * * * *   $rll -l $logs $cj/pull_cronjobs.zsh
 6   * * * *   $rll -l $logs $cj/update_gemc_home_docker_image_list.zsh
 8   * * * *   $rll -l $logs $cj/update_g4install_readme.sh
-10  * * * *   $rll -l $logs $cj/update_ghome.sh 5 - 3
+10  * * * *   $rll -l $logs $cj/update_ghome.sh 5 - 4
 12  * * * *   $rll -l $logs $cj/sync_code_instructions.zsh
 0  11 * * 5   $rll -l $logs $cj/make_weekly_report.zsh
 30 12 * * 1-5 $rll -l $logs $cj/update_translations.zsh
